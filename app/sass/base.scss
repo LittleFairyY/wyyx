@@ -1,0 +1,97 @@
+$bgcolor:#333333;
+
+/*重置样式 start*/
+html, body, ul,a, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, div ,header,nav,footer,figure,figcaption,section,main,input{
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box;
+}
+body{
+ overflow-x: hidden;
+}
+fieldset, img { border:none; }
+input{
+ outline: none;
+ border:0;
+}
+ul,ol{
+list-style: none;
+}
+a{
+text-decoration: none;
+}
+img{
+vertical-align: top;
+border: 0;
+}
+h1,h2,h3,h4,h5,h6{
+font-weight: normal;
+}
+input{
+outline: none;
+border:0;
+}
+.fl{
+float:left;
+}
+.fr{
+float:right;
+}
+.clear:after{
+content: "";
+display: block;
+visibility: hidden;
+clear: both;
+height: 0;
+}
+.clear{
+zoom: 1;
+}
+.w{
+width:1105px;
+margin:0 auto;
+}
+// header start
+.header_top{
+  height:36px;
+  width:100%;
+  background-color: $bgcolor;
+  .header{
+    color:#cccccc;
+    font-size: 12px;
+    p{
+      height:36px;
+      float:left;
+      line-height: 36px;
+    }
+    .top_right{
+      float:right;
+      .top_item{
+        height:36px;
+        line-height: 36px;
+         a{
+          color:#ccc;
+          margin:0 9px
+        }
+        a:hover{
+          color:#eee;
+        }
+      }
+      .top_item:last-child{
+        a{
+          padding-left:12px;
+          background:url(../img/index/logo.png) no-repeat 0 4px;
+        }
+      }
+      .top_item:nth-child(7){
+        a{
+          padding-right:24px;
+          background:url(../img/index/logo.png) no-repeat 81px -290px;
+        }
+       
+      }
+
+      
+    }
+  }
+}
