@@ -1,1 +1,1 @@
-"use strict";$(function(){$("#header").load("html/header.html #header_top"),console.log(123)});
+"use strict";$(function(){$("#header").load("html/header.html #head"),console.log(123)});
