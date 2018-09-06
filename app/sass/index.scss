@@ -13,13 +13,12 @@ $font-size:12px;
   position: relative;
   .btnBox{
     height:420px;
-    background-color: rgba(0,0,0,.5);
     position: relative;
     .prevBtn{
       width:30px;
       height:30px;
       border-radius: 50%;
-      background: url(../img/index/icon4.png) no-repeat 0 -2347px;
+      background: url(../img/index/icon4.png) no-repeat 0 -2389px;
       position: absolute;
       left:-15px;
       z-index: 20;
@@ -29,12 +28,18 @@ $font-size:12px;
       width:30px;
       height:30px;
       border-radius: 50%;
-      background: url(../img/index/xy.png) no-repeat;
+      background: url(../img/index/icon4.png) no-repeat 0 -4329px;//4289
       position: absolute;
       right:-15px;
       z-index: 20;
       @include cz;
 
+    }
+    .prevBtn:hover{
+      background-position-y:-2347px; 
+    }
+    .nextBtn:hover{
+      background-position-y: -4289px;
     }
   }
   ul{

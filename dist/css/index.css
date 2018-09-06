@@ -4,13 +4,12 @@
   position: relative; }
   .banner .btnBox {
     height: 420px;
-    background-color: rgba(0, 0, 0, 0.5);
     position: relative; }
     .banner .btnBox .prevBtn {
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background: url(../img/index/icon4.png) no-repeat 0 -2347px;
+      background: url(../img/index/icon4.png) no-repeat 0 -2389px;
       position: absolute;
       left: -15px;
       z-index: 20;
@@ -21,13 +20,17 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background: url(../img/index/xy.png) no-repeat;
+      background: url(../img/index/icon4.png) no-repeat 0 -4329px;
       position: absolute;
       right: -15px;
       z-index: 20;
       top: 0;
       bottom: 0;
       margin: auto; }
+    .banner .btnBox .prevBtn:hover {
+      background-position-y: -2347px; }
+    .banner .btnBox .nextBtn:hover {
+      background-position-y: -4289px; }
   .banner ul {
     width: 100%;
     height: 420px;
