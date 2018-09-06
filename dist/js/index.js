@@ -1,1 +1,1 @@
-"use strict";$(function(){$("#header").load("html/header.html #head"),console.log(123)});
+"use strict";require(["config"],function(){require(["jquery","base","slider"],function(e,r,i){e(function(){r.head(e("#header")),r.foot(e("#footer")),i.slider(e("#banner"))})})});

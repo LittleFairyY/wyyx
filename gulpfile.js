@@ -12,11 +12,15 @@ gulp.task("css",function(){
   gulp.src("app/css/**/*.css").pipe(minifyCss()).pipe(gulp.dest("dist/css")).pipe(connect.reload())
 })
 gulp.task("js",function(){
-  gulp.src("app/js/**/*.js").pipe(babel({presets:['@babel/env']})).pipe(uglifyJs()).pipe(gulp.dest("dist/js")).pipe(connect.reload());
+  //除了libs中的js以外
+  gulp.src(["app/**/*.js","!app/libs/*.js"]).pipe(babel({presets:['@babel/env']})).pipe(uglifyJs()).pipe(gulp.dest("dist")).pipe(connect.reload());
+})
+gulp.task("libs",function(){
+  gulp.src("app/libs/**/*").pipe(gulp.dest("dist/libs"));
 })
 gulp.task("watch",function(){
   gulp.watch('./app/css/*.css',["css"]);
-  gulp.watch('./app/js/*.js',["js"]);
+  gulp.watch('./app/**/*.js',["js"]);
   gulp.watch('./app/**/*.html',["html"]);
   gulp.watch("./app/sass/**/*",["sass"]);
 })
@@ -37,5 +41,5 @@ gulp.task("server",function(){
   })
 })
 
-gulp.task("default",["server","css","js","html","watch","img","sass"])
+gulp.task("default",["server","css","js","html","watch","img","sass","libs"])
 

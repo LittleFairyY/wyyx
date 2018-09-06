@@ -5,18 +5,33 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/index.css">
-  <script src="libs/jquery-1.11.3.min.js"></script>
-  <script src="libs/jquery.cookie.js"></script>
-  <script src="js/index.js"></script>
+  <!-- <script src="libs/jquery-1.11.3.min.js"></scr                -->
+  <script src="libs/require.js" data-main="js/index.js"></script>
+  <!-- <script src="js/index.js"></script> -->
 
 </head>
 <body>
-  <header id="header">
-    <!-- <div class="header_top" id="header_top">
-      <div class="header w">
-        <p>好的生活，没那么贵</p>
-      </div>
-    </div> -->
-  </header>
+  <header id="header"></header>
+  <div class="banner" id="banner">
+    <div class="btnBox w" id="btnBox">
+      <div class="prevBtn" id="prevBtn"></div>
+      <div class="nextBtn" id="nextBtn"></div>
+    </div>
+    <ul id="slider">
+      <li><a href="javascript:void(0)"><img src="/img/index/5d4661aea523f539e1ec8bab56bd0e71.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/81c4fedd3054378c9ea022861a3d6ae1.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/55ec871808ce4fb40bf435d1cf1e9ce4.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/a38573fd5e482fb7b14f782dcb41cc57.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/262835d7d941bffaaf27766ec6c999fa.jpg" alt=""></a></li>
+    </ul>
+    <ol>
+      <!-- <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li> -->
+    </ol>
+  </div>
+  <footer id="footer"></footer>
 </body>
 </html>

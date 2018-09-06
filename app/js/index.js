@@ -1,4 +1,9 @@
-$(function(){
-  $("#header").load("html/header.html #head");
-  console.log(123)
-})
+require(['config'],function(){
+    require(['jquery','base',"slider"],function($,base,slider){
+      $(function(){
+        base.head($("#header"));
+        base.foot($("#footer"));
+        slider.slider($("#banner"));
+      });
+    });
+});

@@ -1,0 +1,1 @@
+"use strict";define(function(){return{slider:function(s){var l=$("#slider li").size()-1;$("#slider li").each(function(i){var e=$("<li></li>");i==l&&e.addClass("active"),s.find("ol").append(e),e.on("click",function(){$(this).addClass("active").siblings().removeClass("active"),$("#slider li").eq(l).fadeOut(),l=$(this).index(),$("#slider li").eq(l).fadeIn()})})}}});

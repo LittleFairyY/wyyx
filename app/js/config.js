@@ -1,0 +1,17 @@
+require.config({
+  baseURL:"/",
+  paths:{
+    "jquery":"../libs/jquery-1.11.3.min",
+    "base":"../module/base",
+    "slider":"../module/slider",
+    "url":"../module/url"
+  },
+  shim:{
+    base:{
+      deps:["jquery"]
+    },
+    slider:{
+      deps:["jquery"]
+    }
+  }
+})
