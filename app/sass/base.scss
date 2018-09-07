@@ -2,11 +2,22 @@ $width:1105px;//版心宽
 $bgcolor:#333333; //头部背景颜色
 $color:#b4a078; //logo字体颜色
 $font-size:12px;
+@mixin  iBlock($width,$height,$lineHeight) {
+  position: absolute;
+  text-align: center;
+  width:$width;
+  height:$height;
+  line-height: $lineHeight;
+  font-size: $font-size;
+  color:#fff;
+}
 /*重置样式 start*/
 html, body, ul,a, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, div ,header,nav,footer,figure,figcaption,section,main,input{
   margin:0; 
   padding:0; 
   box-sizing:border-box;
+  font-size: $font-size;
+  font-family: "Microsoft Yahei","微软雅黑",verdana;
 }
 body{
  overflow-x: hidden;
@@ -93,11 +104,9 @@ margin:0 auto;
           }
           i{
             display: none;
-            width:15px;
-            height:7px;
-            position: absolute;
             left:13px;
             bottom:0;
+            @include iBlock(15px,7px,20px); 
             background:url(../img/index/logo.png) no-repeat 3px -335px;
           }
           //二维码
@@ -130,8 +139,7 @@ margin:0 auto;
           }
         }
         .top_item:nth-child(7){
-            position: relative;
-            // background:url(../img/index/logo.png) no-repeat 28px -315px;                           
+            position: relative;                         
             a{
               padding-right:24px;
               background:url(../img/index/logo.png) no-repeat 56px -315px;
@@ -139,11 +147,9 @@ margin:0 auto;
             }
             i{
               display: none;
-              width:15px;
-              height:7px;
-              position: absolute;
               left:30px;
               bottom:0;
+              @include iBlock(15px,7px,20px); 
               background:url(../img/index/logo.png) no-repeat 3px -335px;
             }
             &:hover{
@@ -237,16 +243,10 @@ margin:0 auto;
         position: relative;
         //购物车数量
         i{
-          position: absolute;
           right:0px;
           top:-4px;
-          width:20px;
-          height:20px;
-          color:#fff;
-          font-size: $font-size;
-          line-height: 20px;
-          text-align: center;
-          background:url(../img/index/logo.png) no-repeat 0 -50px;            
+          background:url(../img/index/logo.png) no-repeat 0 -50px;
+          @include iBlock(20px,20px,20px);          
         }     
       }
     }
@@ -254,24 +254,86 @@ margin:0 auto;
   //nav start
   .navbox{
     height:70px;
+    .navLogo{
+      display: none;
+    }
+    .nav_btn{
+      @extend .navLogo;
+    }
     .nav{
       font-size: $font-size;
       height:70px;
-      li{
+      >li{
         line-height: 70px;
         float:left;
         font-weight: 600;
         margin:0 25px;
-        a{
+        >a{
           color:#000;
         }
-        a:hover{
+        >a:hover{
           color:$color;
           border-bottom:3px solid $color;
         }
-        .active{
+        >.active{
           @extend a:hover;
         }
+      }
+    }
+  }
+  .navfxied{
+    width:100%;
+    height:60px;
+    position: fixed;
+    top:0;
+    background: #fff;
+    z-index: 20;
+    box-shadow: 0px 0px 24px -5px #666;
+    div.navLogo{
+      display: block;
+      width:106px;
+      height:38px;
+      margin-top:14px;
+      background: url(../img/index/logo.png) no-repeat 0 -217px;
+    }
+    ul.nav{
+      height:60px;
+      margin-left:28px;
+      float: left;
+      >li{
+        line-height: 60px;
+        margin:0 16px;
+        }
+    }
+    p.nav_btn{
+      display: block;
+      float:left;
+      line-height: 75px;
+      a{
+        display: inline-block;
+        width:20px;
+        height:20px;
+        margin:0 13px;
+        background: url(../img/index/logo.png) no-repeat 0 -261px;
+        position: relative;
+        .count{
+          right:-12px;
+          top:-12px;
+          text-align: center;
+          @include iBlock(20px,20px,20px); 
+          background:url(../img/index/logo.png) no-repeat 0 -50px; 
+        }
+      }
+      a:nth-child(2){
+        width:21px;
+        height:22px;
+        background-position-y: -353px;
+      }
+      a:nth-child(3){
+        width:24px;
+        height:22px;
+        background-position-y: -81px;
+
       }
     }
   }
@@ -304,7 +366,6 @@ margin:0 auto;
           height:26px;
           margin-left:23px;
           margin-bottom:18px;
-          // background: url(../img/index/icon.png) no-repeat 0 -196px;
           background: url(../img/index/icon.png) no-repeat 0 -232px;
         }
         dd{
@@ -322,7 +383,6 @@ margin:0 auto;
       >dl+dl{
         margin-left:30px;
         >dt{
-           // background: url(../img/index/icon.png) no-repeat 0 -60px;
            background: url(../img/index/icon.png) no-repeat 0 -99px;
         }
       }
@@ -386,7 +446,6 @@ margin:0 auto;
       padding-top:38px;
       >dl{
         float: left;
-        // text-align: center;
         width:$width/3; 
         padding-left:80px;
         >dt{

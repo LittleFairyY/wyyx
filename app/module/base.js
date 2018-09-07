@@ -1,10 +1,19 @@
 define(function() {
   return {
     head:function(ele){
-     ele.load("html/header.html #head");
+     $("#header").load("/html/header.html #head",function(){
+      var $height=$("#header_top").height()+$("#logobox").height();
+      $(window).on("scroll",function(){
+        if($(window).scrollTop()>=$height){
+          $("#navfxied").addClass("navfxied");
+        }else{
+          $("#navfxied").removeClass("navfxied");
+        }
+      })
+     });
     },
     foot:function(ele){
-      ele.load("html/footer.html #foot");
+      $("#footer").load("/html/footer.html #foot");
     }
   }
 });

@@ -1,9 +1,11 @@
 require(['config'],function(){
-    require(['jquery','base',"slider"],function($,base,slider){
+    require(['jquery','base',"slider","getNewPro","getHotPro"],function($,base,slider,getNewPro,getHotPro){
       $(function(){
-        base.head($("#header"));
-        base.foot($("#footer"));
+        base.head();
+        base.foot();
         slider.slider($("#banner"));
+        getNewPro.getData();
+        getHotPro.getData();
       });
     });
 });

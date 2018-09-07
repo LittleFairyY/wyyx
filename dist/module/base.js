@@ -1,1 +1,1 @@
-"use strict";define(function(){return{head:function(t){t.load("html/header.html #head")},foot:function(t){t.load("html/footer.html #foot")}}});
+"use strict";define(function(){return{head:function(o){$("#header").load("/html/header.html #head",function(){var o=$("#header_top").height()+$("#logobox").height();$(window).on("scroll",function(){$(window).scrollTop()>=o?$("#navfxied").addClass("navfxied"):$("#navfxied").removeClass("navfxied")})})},foot:function(o){$("#footer").load("/html/footer.html #foot")}}});

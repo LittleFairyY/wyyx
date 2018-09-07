@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/index.css">
-  <!-- <script src="libs/jquery-1.11.3.min.js"></scr                -->
-  <script src="libs/require.js" data-main="js/index.js"></script>
-  <!-- <script src="js/index.js"></script> -->
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <script src="/libs/require.js" data-main="/js/index.js"></script>
 
 </head>
 <body>
+  <!-- 头部 -->
   <header id="header"></header>
+  <!-- 轮播图 -->
   <div class="banner" id="banner">
     <div class="btnBox w" id="btnBox">
       <div class="prevBtn" id="prevBtn"></div>
@@ -25,13 +25,89 @@
       <li><a href="javascript:void(0)"><img src="/img/index/262835d7d941bffaaf27766ec6c999fa.jpg" alt=""></a></li>
     </ul>
     <ol>
-      <!-- <li class="active"></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li> -->
     </ol>
   </div>
+  <!-- 制造商 -->
+  <div class="manuFacturer w" id="manuFacturer">
+    <h1 class="litterTitle"><span>品牌制造商</span> <span>工厂直达消费者，剔除品牌溢价</span><a href="javascript:void(0)">更多制造商 ></a></h1>
+    <div class="makeImg">
+      <div class="makeImg_left fl">
+        <div class="makeFont">
+          <p>海外制造商  <i class="new">上新</i></p>
+          <span>9.9元起</span>
+        </div>
+      </div>
+      <div class="makeImg_center fl">
+        <div class="makeFont">
+          <p>CK制造商 <i class="new">上新</i></p>
+          <span>25元起</span>
+        </div>
+      </div>
+      <div class="makeImg_right fl">
+        <div class="make_r_t">
+          <div class="makeFont x">
+            <p>新秀丽制造商</p>
+            <span>49元起</span>
+          </div>
+        </div>
+        <div class="make_r_b">
+          <div class="makeFont x">
+            <p>Nine West制造商 <i class="new">上新</i></p>
+            <span>209元起</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 新品 -->
+  <div class="newPro w" id="newPro">
+    <h1 class="litterTitle"><span>新品首发</span> <span>为你寻觅时间好物</span><a href="javascript:void(0)">更多制造商 ></a></h1>
+    <div class="newImg" id="newImg">
+      <ul>
+      </ul>
+    </div>
+  </div>
+  <!-- 人气推荐 -->
+  <div class="hotProBox">
+    <div class="hotPro w">
+        <h1 class="litterTitle"><span>人气推荐</span> <i class="active">编辑推荐</i><i>热情总榜</i><a href="javascript:void(0)">更多制造商 ></a></h1>
+        <div class="hotPros">
+          <div class="hotPros_left fl" id="hotPros_left">
+          </div>
+          <ul class="hotPros_right fr" id="hotPros_right">
+          </ul>
+        </div>
+    </div>
+  </div>
+  <!-- 尾部 -->
   <footer id="footer"></footer>
+  <script type="text/html" id="list">
+    <li>
+        <a href="javascript:void(0)">
+          <img src={{data.img[0]}} alt="">
+          <h2>{{data.proName}}</h2>
+          <p>
+            <span class="price">￥{{data.xprice}}</span> 
+            {{if data.shops}}
+            <span class="shops">{{data.shops}}</span>
+            {{/if}}
+          </p>
+        </a>
+    </li>
+  </script>
+  <script type="text/html" id="hotPro">
+    <li>
+      <a href="javascript:void(0)">
+          <img src={{data.img[0]}} alt="">
+        <div>
+            <h2>{{data.proName}}</h2>
+            <span class="price">￥{{data.xprice}}</span> 
+            {{if data.yprice}}
+            <span class="oldPrice">￥{{data.yprice}}</span>
+            {{/if}}
+        </div>
+      </a>
+    </li>
+  </script>
 </body>
 </html>
