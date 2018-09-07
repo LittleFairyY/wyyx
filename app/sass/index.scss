@@ -105,15 +105,17 @@ $font-size:12px;
   >span{
     font-size: 27px;
     font-weight: 600;
+    i{
+      @extend span;
+      margin-right:25px;
+      cursor: pointer;
+    }
   }
   >span+span{
     font-size: $font-size;
     margin-left:20px;
     font-weight: 400;
     color:$bgcolor;
-  }
-  >i{
-    @extend span;
   }
   .active{
     color:nth($color,1);

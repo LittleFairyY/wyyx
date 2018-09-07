@@ -1,1 +1,1 @@
-"use strict";require(["config"],function(){require(["jquery","base","slider","getNewPro","getHotPro"],function(e,t,r,i,n){e(function(){t.head(),t.foot(),r.slider(e("#banner")),i.getData(),n.getData()})})});
+"use strict";require(["config"],function(){require(["jquery","base","slider","getNewPro","getHotPro"],function(e,t,n,i,o){e(function(){t.head(),t.foot(),n.slider(e("#banner")),i.getData(),e("#hotPros").find("h1 span i").on("click",function(){}),o.getData()})})});

@@ -4,7 +4,6 @@ define(["url","template"],function(url,template) {
      $.get(url.url+"/v1/getHotPro.php",{kind:"bjtj"},function(datas){
       // console.log(datas)
       $.each(datas.data,function(index,data1){
-        console.log(data1)
         data1.img=data1.img.split(",");
         if(index!=0){
           var $str=template("hotPro",{data:data1});

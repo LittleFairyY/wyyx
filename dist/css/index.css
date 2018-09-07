@@ -68,10 +68,13 @@
 
 .litterTitle {
   line-height: 66px; }
-  .litterTitle > span, .litterTitle > i {
+  .litterTitle > span, .litterTitle > span .litterTitle > i {
     font-size: 27px;
     font-weight: 600; }
-  .litterTitle > span + span, .litterTitle > i + span, .litterTitle > span + i, .litterTitle > i + i {
+    .litterTitle > span i {
+      margin-right: 25px;
+      cursor: pointer; }
+  .litterTitle > span + span, .litterTitle > span .litterTitle > i + span, .litterTitle > span .litterTitle > span + i, .litterTitle > span .litterTitle > i + i {
     font-size: 12px;
     margin-left: 20px;
     font-weight: 400;
@@ -109,7 +112,7 @@
             line-height: 18px;
             font-size: 12px;
             color: #fff; }
-        .manuFacturer .makeImg > div .makeFont span, .manuFacturer .makeImg > div .makeFont .litterTitle > i {
+        .manuFacturer .makeImg > div .makeFont span, .manuFacturer .makeImg > div .makeFont .litterTitle > span i, .litterTitle > span .manuFacturer .makeImg > div .makeFont i {
           font-size: 12px;
           display: inline-block;
           padding-top: 22px;
