@@ -1,0 +1,91 @@
+$color:#999999 #333333 #dddddd #b4a078;
+@mixin cz {
+  top:0;bottom:0;margin:auto;
+}
+@mixin  iBlock($width,$height,$lineHeight) {
+  position: absolute;
+  text-align: center;
+  width:$width;
+  height:$height;
+  line-height: $lineHeight;
+  color:#fff;
+}
+.rgBox{
+  width:384px;
+  height:498px;
+  background-color: #fff;
+  h1{
+    line-height: 78px;
+    text-align: center;
+    font-size: 18px;
+    color:nth($color,2)
+  }
+  #register{
+    height:310px;
+    text-align: center;
+    >.group{
+      width:300px;
+      height:38px;
+      border-radius: 5px;
+      border:1px solid #e8e8e8;
+      margin-bottom:16px;
+      margin-left:42px;
+      position: relative;
+      label{
+        width:36px;
+        height:24px;
+        background: url(/img/login/js.png) no-repeat center;
+        position: absolute;
+        border-right:1px solid #e8e8e8;
+        left:0;
+        @include cz;
+      }
+      .userEmailLabel{
+        background-image: url(/img/login/rt.png);
+
+      }
+      .userPwdLabel{
+        background-image: url(/img/login/suo.png);
+      }
+      >input{
+        width: 261px;
+        height: 100%;
+        line-height: 38px;
+        padding-left:10px;
+        border-radius: 5px;
+        position: absolute;
+        left: 37px;
+      }
+      i{
+        display: none;
+        @include iBlock(16px,16px,"");
+        background: url(/img/login/icon.png) no-repeat -217px -34px; //-265px -36px
+        right:12px;
+        @include cz;
+      }
+      i.succ{
+        background-position: -265px -34px;
+      }
+    }
+    .login_btn{
+      width:300px;
+      height:38px;
+      border-radius: 5px;
+      background-color: #b4a078;
+      color:#fff;
+      font-size: 18px;
+      margin-top:24px;
+      margin-bottom:62px;
+    }
+    .hint{
+      color:red;
+      text-align: left;
+      height:20px;
+      line-height: 20px;
+    }
+  }
+  p{
+    color:nth($color,1);
+    margin-left:42px;
+  }
+}

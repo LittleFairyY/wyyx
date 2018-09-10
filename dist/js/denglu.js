@@ -1,0 +1,1 @@
+"use strict";require(["config"],function(){require(["jquery","base","check"],function(e,i,n){e(function(){i.head(),n.init(),i.foot()})})});

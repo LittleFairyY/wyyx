@@ -23,6 +23,7 @@ gulp.task("watch",function(){
   gulp.watch('./app/**/*.js',["js"]);
   gulp.watch('./app/**/*.html',["html"]);
   gulp.watch("./app/sass/**/*",["sass"]);
+  gulp.watch("./app/img/**/*",["img"]);
 })
 gulp.task("img",function(){
   //位置迁移

@@ -1,0 +1,11 @@
+require(['config'],function(){
+  require(['jquery','base','check'],function($,base,check){
+    $(function(){
+      //头部
+      base.head();
+      check.init()
+      //尾部
+      base.foot();
+    });
+  });
+});

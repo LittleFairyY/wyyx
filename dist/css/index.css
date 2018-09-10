@@ -12,7 +12,7 @@
       background: url(../img/index/icon4.png) no-repeat 0 -2389px;
       position: absolute;
       left: -15px;
-      z-index: 20;
+      z-index: 5;
       top: 0;
       bottom: 0;
       margin: auto; }
@@ -23,7 +23,7 @@
       background: url(../img/index/icon4.png) no-repeat 0 -4329px;
       position: absolute;
       right: -15px;
-      z-index: 20;
+      z-index: 5;
       top: 0;
       bottom: 0;
       margin: auto; }
@@ -45,17 +45,18 @@
         width: 100%;
         height: 420px; }
   .banner ol {
-    width: 150px;
+    width: 100%;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 20px; }
+    bottom: 20px;
+    text-align: center; }
     .banner ol li {
       width: 8px;
       height: 8px;
       margin: 10px 8px;
-      float: left;
+      display: inline-block;
       border-radius: 50%;
       background-color: #fff;
       border: 1px solid #d2d2d2;
@@ -147,42 +148,71 @@
 
 .newPro {
   margin-top: 40px; }
-  .newPro .newImg > ul {
-    height: 398px; }
-    .newPro .newImg > ul > li {
-      width: 25%;
-      float: left;
-      height: 344px; }
-      .newPro .newImg > ul > li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center; }
-        .newPro .newImg > ul > li a img {
-          width: 100%; }
-        .newPro .newImg > ul > li a h2 {
-          margin-top: 20px;
-          font-weight: 600;
-          color: #333333;
+  .newPro .newImg {
+    position: relative; }
+    .newPro .newImg .new_prve {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: url(../img/index/icon4.png) no-repeat 0 -2389px;
+      position: absolute;
+      left: -15px;
+      z-index: 5;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+    .newPro .newImg .new_next {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: url(../img/index/icon4.png) no-repeat 0 -4329px;
+      position: absolute;
+      right: -15px;
+      z-index: 5;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+    .newPro .newImg > .new_prve:hover {
+      background-position-y: -2347px; }
+    .newPro .newImg > .new_next:hover {
+      background-position-y: -4289px; }
+    .newPro .newImg > ul {
+      height: 398px; }
+      .newPro .newImg > ul > li {
+        width: 25%;
+        float: left;
+        height: 344px; }
+        .newPro .newImg > ul > li a {
+          display: block;
+          width: 100%;
+          height: 100%;
           text-align: center; }
-        .newPro .newImg > ul > li a h2:hover {
-          color: #b4a078; }
-        .newPro .newImg > ul > li a p {
-          text-align: center;
-          margin-top: 12px; }
-          .newPro .newImg > ul > li a p .price {
-            color: #d4282d; }
-          .newPro .newImg > ul > li a p .shops {
-            color: #999999;
-            padding-left: 12px;
-            border-left: 1px solid #999999;
-            margin-left: 8px; }
-    .newPro .newImg > ul .ac {
-      background-color: #f4f0ea; }
+          .newPro .newImg > ul > li a img {
+            width: 100%; }
+          .newPro .newImg > ul > li a h2 {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #333333;
+            text-align: center; }
+          .newPro .newImg > ul > li a h2:hover {
+            color: #b4a078; }
+          .newPro .newImg > ul > li a p {
+            text-align: center;
+            margin-top: 12px; }
+            .newPro .newImg > ul > li a p .price {
+              color: #d4282d; }
+            .newPro .newImg > ul > li a p .shops {
+              color: #999999;
+              padding-left: 12px;
+              border-left: 1px solid #999999;
+              margin-left: 8px; }
+      .newPro .newImg > ul .ac {
+        background-color: #f4f0ea; }
 
 .hotProBox {
   width: 100%;
   height: 698px;
+  padding-top: 45px;
   background-color: #f4f0ea; }
   .hotProBox .hotPros {
     height: 530px; }
@@ -192,7 +222,10 @@
       text-align: center;
       background-color: #fff; }
       .hotProBox .hotPros .hotPros_left > a > img {
-        margin: 40px 0; }
+        width: 320px;
+        height: 320px;
+        margin: 40px 0;
+        transition: all 1s; }
       .hotProBox .hotPros .hotPros_left > a > div {
         height: 130px;
         border-top: 1px solid #f4f0ea;
@@ -207,6 +240,8 @@
           color: #b4a078; }
         .hotProBox .hotPros .hotPros_left > a > div .price {
           color: #d4282d; }
+      .hotProBox .hotPros .hotPros_left > a:hover img {
+        transform: scale(1.1); }
     .hotProBox .hotPros > .hotPros_right {
       width: 690px; }
       .hotProBox .hotPros > .hotPros_right > li {
@@ -219,7 +254,8 @@
         text-align: center; }
         .hotProBox .hotPros > .hotPros_right > li > a img {
           width: 180px;
-          height: 180px; }
+          height: 180px;
+          transition: all 1s; }
         .hotProBox .hotPros > .hotPros_right > li > a > div {
           border-top: 1px solid #f4f0ea;
           height: 80px; }
@@ -236,7 +272,136 @@
           .hotProBox .hotPros > .hotPros_right > li > a > div .oldPrice {
             text-decoration: line-through;
             color: #999999; }
+        .hotProBox .hotPros > .hotPros_right > li > a:hover img {
+          transform: scale(1.1);
+          animation: opcity 2s; }
       .hotProBox .hotPros > .hotPros_right li:nth-child(3n) {
         margin-right: 0; }
       .hotProBox .hotPros > .hotPros_right li:nth-child(4 + n) {
         margin-bottom: 0; }
+
+.time_to_buy {
+  padding-top: 46px;
+  height: 545px; }
+  .time_to_buy .timeBox {
+    height: 380px;
+    width: 225px;
+    background: url(/img/index/time.jpg) no-repeat;
+    background-size: contain;
+    color: #61594b;
+    padding-top: 68px;
+    text-align: center; }
+    .time_to_buy .timeBox h3 {
+      font-size: 22px;
+      text-align: center; }
+    .time_to_buy .timeBox .line {
+      width: 20px;
+      border: 1px solid #61594b;
+      margin: 16px auto; }
+    .time_to_buy .timeBox span, .time_to_buy .timeBox .litterTitle > span i, .litterTitle > span .time_to_buy .timeBox i {
+      font-size: 16px; }
+    .time_to_buy .timeBox p {
+      text-align: center;
+      margin: 22px 0 50px; }
+      .time_to_buy .timeBox p span, .time_to_buy .timeBox p .litterTitle > span i, .litterTitle > span .time_to_buy .timeBox p i {
+        display: inline-block;
+        background-color: #61594b;
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        margin: 0 7px; }
+    .time_to_buy .timeBox a {
+      display: inline-block;
+      width: 110px;
+      height: 30px;
+      background-color: #a7936e;
+      color: #fff;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 20px;
+      font-size: 13px; }
+  .time_to_buy .time_left {
+    border-bottom: 1px solid #f0ece4;
+    width: 880px;
+    height: 380px; }
+    .time_to_buy .time_left > a {
+      float: left;
+      width: 440px;
+      height: 190px;
+      position: relative; }
+      .time_to_buy .time_left > a > dl {
+        width: 440px;
+        height: 190px;
+        border-top: 1px solid #f0ece4;
+        border-right: 1px solid #f0ece4; }
+        .time_to_buy .time_left > a > dl > dt {
+          width: 180px;
+          height: 180px;
+          float: left;
+          text-align: center; }
+          .time_to_buy .time_left > a > dl > dt img {
+            transition: all 1s; }
+        .time_to_buy .time_left > a > dl > dd {
+          float: left;
+          width: 259px; }
+          .time_to_buy .time_left > a > dl > dd h5 {
+            color: #333333;
+            font-size: 16px;
+            margin-top: 20px; }
+          .time_to_buy .time_left > a > dl > dd > .t_description, .time_to_buy .time_left > a > dl > dd > .t_repertory {
+            color: #999999;
+            line-height: 32px; }
+          .time_to_buy .time_left > a > dl > dd > .t_repertory > .t_progress {
+            display: inline-block;
+            width: 152px;
+            height: 10px;
+            border-radius: 20px;
+            border: 1px solid #f2cecd;
+            background-color: #fff;
+            margin-right: 10px;
+            position: relative;
+            overflow: hidden; }
+            .time_to_buy .time_left > a > dl > dd > .t_repertory > .t_progress i {
+              display: inline-block;
+              width: 0;
+              height: 8px;
+              border-radius: 20px;
+              background-color: #ffe5e5;
+              position: absolute; }
+          .time_to_buy .time_left > a > dl > dd > .t_priceBox {
+            line-height: 26px;
+            color: #d4282d;
+            margin-bottom: 16px; }
+            .time_to_buy .time_left > a > dl > dd > .t_priceBox > .t_price {
+              font-size: 18px;
+              margin-right: 16px;
+              font-weight: 600; }
+            .time_to_buy .time_left > a > dl > dd > .t_priceBox > .t_oldPrice {
+              color: #999999;
+              line-height: 26px; }
+          .time_to_buy .time_left > a > dl > dd > button {
+            width: 118px;
+            height: 30px;
+            background-color: #d4282d;
+            color: #fff;
+            border-radius: 2px; }
+          .time_to_buy .time_left > a > dl > dd > p {
+            display: none;
+            color: #8f8888;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            text-align: center; }
+            .time_to_buy .time_left > a > dl > dd > p > span, .time_to_buy .litterTitle > span .time_left > a > dl > dd > p > i, .litterTitle > span .time_to_buy .time_left > a > dl > dd > p > i {
+              display: inline-block;
+              font-size: 32px;
+              transform: rotate(45deg);
+              line-height: 190px; }
+    .time_to_buy .time_left > a:hover dl dt img {
+      transform: scale(1.1); }

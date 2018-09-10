@@ -1,0 +1,106 @@
+.lgBox {
+  width: 386px;
+  height: 393px;
+  background-color: #fff; }
+  .lgBox .login {
+    height: 332px;
+    width: 100%;
+    padding-top: 15px;
+    text-align: center; }
+    .lgBox .login > h1 {
+      height: 48px;
+      line-height: 48px;
+      color: #999999;
+      margin-bottom: 37px; }
+      .lgBox .login > h1 > a {
+        display: inline-block;
+        width: 49%;
+        text-align: center;
+        color: #999999;
+        font-size: 16px; }
+      .lgBox .login > h1 .loginActive {
+        color: #333333; }
+    .lgBox .login > .group {
+      width: 300px;
+      height: 38px;
+      border-radius: 5px;
+      border: 1px solid #e8e8e8;
+      margin-bottom: 16px;
+      margin-left: 42px;
+      position: relative; }
+      .lgBox .login > .group label {
+        width: 36px;
+        height: 24px;
+        background: url(/img/login/js.png) no-repeat center;
+        position: absolute;
+        border-right: 1px solid #e8e8e8;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+      .lgBox .login > .group .userPwdLabel {
+        background: url(/img/login/suo.png) no-repeat center; }
+      .lgBox .login > .group > input {
+        width: 261px;
+        height: 100%;
+        line-height: 38px;
+        padding-left: 10px;
+        border-radius: 5px;
+        position: absolute;
+        left: 37px; }
+    .lgBox .login .login_btn {
+      width: 300px;
+      height: 38px;
+      border-radius: 5px;
+      background-color: #b4a078;
+      color: #fff;
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 62px; }
+    .lgBox .login .hint {
+      color: red;
+      line-height: 20px;
+      height: 20px;
+      text-align: left;
+      margin-left: 42px; }
+  .lgBox .login_foot {
+    height: 61px;
+    width: 100%;
+    background-color: #f5f3ef;
+    padding-right: 30px; }
+    .lgBox .login_foot p {
+      margin-left: 40px;
+      float: left; }
+      .lgBox .login_foot p a {
+        display: inline-block;
+        width: 24px;
+        height: 18px;
+        margin-top: 22px;
+        margin-right: 20px;
+        background: url(/img/login/links.png) no-repeat -10px -10px; }
+        .lgBox .login_foot p a:hover {
+          background-position-y: -49px; }
+      .lgBox .login_foot p a:nth-child(2) {
+        background-position-y: -248px;
+        width: 18px;
+        height: 24px; }
+        .lgBox .login_foot p a:nth-child(2):hover {
+          background-position-y: -292px; }
+      .lgBox .login_foot p a:nth-child(3) {
+        background-position-y: -128px;
+        width: 24px;
+        height: 20px; }
+        .lgBox .login_foot p a:nth-child(3):hover {
+          background-position-y: -208px; }
+      .lgBox .login_foot p a:nth-child(4) {
+        background-position-y: -88px;
+        width: 17px;
+        height: 21px; }
+        .lgBox .login_foot p a:nth-child(4):hover {
+          background-position-y: -168px; }
+    .lgBox .login_foot a {
+      float: right;
+      line-height: 60px;
+      color: #999999; }
+      .lgBox .login_foot a:hover {
+        color: #b4a078; }

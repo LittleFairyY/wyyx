@@ -1,0 +1,17 @@
+// @import "base.sass";
+@mixin cz {
+  top:0;bottom:0;margin:auto;
+}
+$color:#999999 #333333 #dddddd #b4a078;
+.loginBox{
+  height:600px;
+  background: url(/img/login/login.jpg) no-repeat 50% 50%;
+  iframe{
+    float:right;
+    width:386px;
+    height:498px;
+    margin:84px;
+    // background-color: #fff;
+    overflow: hidden;
+  }
+}

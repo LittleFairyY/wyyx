@@ -43,7 +43,7 @@ define(function() {
       function autoPlay(){
         timer=setInterval(function(){
           next()
-        },2000);
+        },4000);
       }
       function next(){
         $index++;

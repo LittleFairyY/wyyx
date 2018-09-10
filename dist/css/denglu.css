@@ -1,0 +1,9 @@
+.loginBox {
+  height: 600px;
+  background: url(/img/login/login.jpg) no-repeat 50% 50%; }
+  .loginBox iframe {
+    float: right;
+    width: 386px;
+    height: 498px;
+    margin: 84px;
+    overflow: hidden; }

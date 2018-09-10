@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/register.css">
+  <script src="/libs/require.js" data-main="/js/register.js"></script>
+</head>
+<body>
+  <div class="rgBox">
+    <h1>注册</h1>
+    <form id="register" action="/html/login.html">
+      <div class="group">
+        <label for="userName" class="userNameLabel"></label>
+        <input type="text" name="userName" id="userName" class="userName" placeholder="请输入手机号">
+        <i></i>
+      </div>
+      <div class="group">
+        <label for="userEmail" class="userEmailLabel"></label>
+        <input type="text" name="userEmail" id="userEmail" class="userEmail" placeholder="请输入邮箱">
+        <i></i>        
+      </div>
+      <div class="group">
+        <label for="userPwd" class="userPwdLabel"></label>
+        <input type="password" name="userPwd" id="userPwd" class="userPwd" placeholder="请输入密码">
+        <i></i>      
+      </div>
+      <div class="group">
+        <label for="oldPwd" class="userPwdLabel"></label>
+        <input type="password" name="oldPwd" id="oldPwd" class="userPwd" placeholder="请再次输入密码">
+        <i></i>      
+      </div>
+      <p class="hint" id="hint"></p>
+      <input type="submit" id="register_btn" value="注册" class="login_btn">
+    </form>
+    <p>我同意《服务条款》和《网易隐私政策》</p>
+  </div>
+</body>
+</html>

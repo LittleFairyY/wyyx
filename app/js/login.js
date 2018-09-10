@@ -1,0 +1,9 @@
+require(['config'],function(){
+  require(['change',"check"],function(change,check){
+    $(function(){
+      //点击切换
+      change.change();
+      check.login();
+    });
+  });
+});

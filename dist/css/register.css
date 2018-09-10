@@ -1,0 +1,74 @@
+.rgBox {
+  width: 384px;
+  height: 498px;
+  background-color: #fff; }
+  .rgBox h1 {
+    line-height: 78px;
+    text-align: center;
+    font-size: 18px;
+    color: #333333; }
+  .rgBox #register {
+    height: 310px;
+    text-align: center; }
+    .rgBox #register > .group {
+      width: 300px;
+      height: 38px;
+      border-radius: 5px;
+      border: 1px solid #e8e8e8;
+      margin-bottom: 16px;
+      margin-left: 42px;
+      position: relative; }
+      .rgBox #register > .group label {
+        width: 36px;
+        height: 24px;
+        background: url(/img/login/js.png) no-repeat center;
+        position: absolute;
+        border-right: 1px solid #e8e8e8;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+      .rgBox #register > .group .userEmailLabel {
+        background-image: url(/img/login/rt.png); }
+      .rgBox #register > .group .userPwdLabel {
+        background-image: url(/img/login/suo.png); }
+      .rgBox #register > .group > input {
+        width: 261px;
+        height: 100%;
+        line-height: 38px;
+        padding-left: 10px;
+        border-radius: 5px;
+        position: absolute;
+        left: 37px; }
+      .rgBox #register > .group i {
+        display: none;
+        position: absolute;
+        text-align: center;
+        width: 16px;
+        height: 16px;
+        line-height: "";
+        color: #fff;
+        background: url(/img/login/icon.png) no-repeat -217px -34px;
+        right: 12px;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+      .rgBox #register > .group i.succ {
+        background-position: -265px -34px; }
+    .rgBox #register .login_btn {
+      width: 300px;
+      height: 38px;
+      border-radius: 5px;
+      background-color: #b4a078;
+      color: #fff;
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 62px; }
+    .rgBox #register .hint {
+      color: red;
+      text-align: left;
+      height: 20px;
+      line-height: 20px; }
+  .rgBox p {
+    color: #999999;
+    margin-left: 42px; }

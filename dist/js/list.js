@@ -1,0 +1,1 @@
+"use strict";require(["config"],function(){require(["jquery","base","slider"],function(e,i,n){e(function(){i.head(),i.foot()})})});

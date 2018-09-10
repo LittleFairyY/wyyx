@@ -20,6 +20,26 @@
   color:$bgcolor;
   text-align: center;
 }
+@mixin prevBtn {
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  background: url(../img/index/icon4.png) no-repeat 0 -2389px;
+  position: absolute;
+  left:-15px;
+  z-index: 5;
+  @include cz;
+}
+@mixin nextBtn {
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  background: url(../img/index/icon4.png) no-repeat 0 -4329px;
+  position: absolute;
+  right:-15px;
+  z-index: 5;
+  @include cz;
+}
 $bgcolor:#333333; //头部背景颜色
 $color:#b4a078 #d4282d #f4f0ea; //logo字体颜色
 $font-size:12px;
@@ -32,24 +52,10 @@ $font-size:12px;
     height:420px;
     position: relative;
     .prevBtn{
-      width:30px;
-      height:30px;
-      border-radius: 50%;
-      background: url(../img/index/icon4.png) no-repeat 0 -2389px;
-      position: absolute;
-      left:-15px;
-      z-index: 20;
-      @include cz;
+      @include prevBtn;
     }
     .nextBtn{
-      width:30px;
-      height:30px;
-      border-radius: 50%;
-      background: url(../img/index/icon4.png) no-repeat 0 -4329px;
-      position: absolute;
-      right:-15px;
-      z-index: 20;
-      @include cz;
+      @include nextBtn;
     }
     .prevBtn:hover{
       background-position-y:-2347px; 
@@ -77,15 +83,17 @@ $font-size:12px;
     }
   }
   ol{
-    width:150px;
+    // width:150px;
+    width:100%;
     position: absolute;
     @include center;
     bottom:20px;
+    text-align: center;
     li{
       width:8px;
       height:8px;
       margin:10px 8px;
-      float:left;
+      display:inline-block;
       border-radius: 50%;
       background-color: #fff;
       border:1px solid #d2d2d2;
@@ -102,6 +110,7 @@ $font-size:12px;
 //小标题
 .litterTitle{
   line-height: 66px;
+  // margin-top:45px;
   >span{
     font-size: 27px;
     font-weight: 600;
@@ -202,6 +211,19 @@ $font-size:12px;
 .newPro{
   margin-top:40px;
   .newImg{
+    position: relative;
+    .new_prve{
+      @include prevBtn;
+    }
+    .new_next{
+      @include nextBtn;
+    }
+    >.new_prve:hover{
+      background-position-y:-2347px; 
+    }
+    >.new_next:hover{
+      background-position-y: -4289px;
+    }
     >ul{
       height:398px;
         >li{
@@ -248,6 +270,7 @@ $font-size:12px;
 .hotProBox{
   width:100%;
   height:698px;
+  padding-top:45px;
   background-color: #f4f0ea;
   .hotPros{
     height:530px;
@@ -259,7 +282,10 @@ $font-size:12px;
       background-color: #fff;
       >a{
         >img{
+          width:320px;
+          height:320px;
           margin:40px 0;
+          transition: all 1s;
         }
         >div{
           height:130px;
@@ -277,7 +303,11 @@ $font-size:12px;
           }
         }
       }
-      
+      >a:hover{
+        img{
+          transform: scale(1.1)
+        }
+      }
     }
     >.hotPros_right{
       width:690px;
@@ -293,6 +323,7 @@ $font-size:12px;
           img{
             width:180px;
             height:180px;
+            transition: all 1s;
           }
           >div{
             border-top:1px solid nth($color,3);
@@ -313,12 +344,181 @@ $font-size:12px;
             }
           }
         }
+        >a:hover{
+          img{
+            transform: scale(1.1);
+            animation: opcity 2s;
+          }
+        }
       }
       li:nth-child(3n){
         margin-right:0;
       }
       li:nth-child(4+n){
         margin-bottom:0;
+      }
+    }
+  }
+}
+
+//限时购
+.time_to_buy{
+  padding-top:46px;
+  height:545px;
+  .timeBox{
+    height:380px;
+    width:225px;
+    background: url(/img/index/time.jpg) no-repeat;
+    background-size: contain;
+    color:#61594b;
+    padding-top:68px;
+    text-align: center;
+    h3{
+      font-size: 22px;
+      text-align: center;
+    }
+    .line{
+      // display: inline-block;
+      width:20px;
+      border:1px solid #61594b;
+      margin:16px auto;
+    }
+    span{
+      font-size: 16px;
+    }
+    p{
+      text-align: center;
+      margin:22px 0 50px;
+      span{
+        display: inline-block;
+        background-color: #61594b;
+        width:40px;
+        height:40px;
+        border-radius: 4px;
+        color:#fff;
+        text-align: center;
+        line-height: 40px;
+        margin:0 7px;
+      }
+    }
+    a{
+      display: inline-block;
+      width:110px;
+      height:30px;
+      background-color: #a7936e;
+      color:#fff;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+  }
+  .time_left{
+    border-bottom:1px solid #f0ece4;
+    width:880px;
+    height:380px;
+    >a{
+      float:left;
+      width:440px;
+      height:190px;
+      position: relative;
+      >dl{
+        width:440px;
+        height:190px;
+        border-top:1px solid #f0ece4;
+        border-right:1px solid #f0ece4;
+        >dt{
+          width:180px;
+          height:180px;
+          float: left;
+          text-align: center;
+          img{
+            transition: all 1s;
+          }
+        }
+        >dd{
+          float: left;
+          width:259px;
+          h5{
+            color:$bgcolor;
+            font-size: 16px;
+            margin-top:20px;
+          }
+          >.t_description{
+            color:#999999;
+            line-height: 32px;
+          }
+          >.t_repertory{
+            @extend .t_description;
+            >.t_progress{
+              display:inline-block;
+              width:152px;
+              height:10px;
+              border-radius: 20px;
+              border:1px solid #f2cecd;
+              background-color: #fff;
+              margin-right:10px;
+              position: relative;
+              overflow: hidden;
+              i{
+                display:inline-block;
+                width:0;
+                height:8px;
+                border-radius: 20px;
+                background-color: #ffe5e5;
+                // width:50px;
+                position: absolute;
+              }
+            }
+          }
+          >.t_priceBox{
+            line-height: 26px;
+            color:nth($color,2);
+            margin-bottom:16px;
+            >.t_price{
+              font-size: 18px;
+              margin-right:16px;
+              font-weight: 600;
+            }
+            >.t_oldPrice{
+              color:#999999;
+              line-height: 26px;
+            }
+          }
+          >button{
+            width:118px;
+            height:30px;
+            background-color: nth($color,2);
+            color:#fff;
+            border-radius: 2px
+          }
+          >p{
+            display:none;
+            color:rgb(143, 136, 136);
+            position: absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            background-color:rgba(0,0,0,0.2);
+            text-align: center;
+            >span{
+              display: inline-block;
+              font-size: 32px;
+              transform: rotate(45deg);
+              line-height: 190px;
+            }
+          }
+        }
+      }
+    }
+    >a:hover{
+      dl{
+        dt{
+          img{
+            transform: scale(1.1)
+          }
+        }
       }
     }
   }

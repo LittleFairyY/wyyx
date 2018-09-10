@@ -1,0 +1,10 @@
+require(['config'],function(){
+  require(['jquery','base',"slider"],function($,base,slider,){
+    $(function(){
+      //头部
+      base.head();
+      //尾部
+      base.foot();
+    });
+  });
+});

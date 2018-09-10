@@ -1,5 +1,5 @@
 require(['config'],function(){
-    require(['jquery','base',"slider","getNewPro","getHotPro"],function($,base,slider,getNewPro,getHotPro){
+    require(['jquery','base',"slider","getNewPro","getHotPro","getTimePro"],function($,base,slider,getNewPro,getHotPro,getTimePro){
       $(function(){
         //头部
         base.head();
@@ -9,11 +9,13 @@ require(['config'],function(){
         slider.slider($("#banner"));
         //新品首发
         getNewPro.getData();
+        getNewPro.change();
+
         //热门推荐
-        $("#hotPros").find("h1 span i").on("click",function(){
-          // $(this).addClass("active").slibings().removeClass("active");
-        })
-        getHotPro.getData();
+        getHotPro.getData("bjtj","bjz");
+        getHotPro.change();
+        //限时抢购
+        getTimePro.getData();
       });
     });
 });

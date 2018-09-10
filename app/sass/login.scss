@@ -1,0 +1,132 @@
+@mixin cz {
+  top:0;bottom:0;margin:auto;
+}
+$color:#999999 #333333 #dddddd #b4a078;
+.lgBox{
+  width:386px;
+  height:393px;
+  // display:none;
+  background-color: #fff;
+  .login{
+    height:332px;
+    width:100%;
+    padding-top:15px;
+    text-align: center;
+    >h1{
+      height:48px;
+      line-height: 48px;
+      color:nth($color,1);
+      margin-bottom:37px;
+      >a{
+        display:inline-block;
+        width:49%;
+        text-align: center;
+        color:nth($color,1);
+        font-size: 16px;
+      }
+      .loginActive{
+        color:nth($color,2)
+      }
+    }
+    >.group{
+      width:300px;
+      height:38px;
+      border-radius: 5px;
+      border:1px solid #e8e8e8;
+      margin-bottom:16px;
+      margin-left:42px;
+      position: relative;
+      label{
+        width:36px;
+        height:24px;
+        background: url(/img/login/js.png) no-repeat center;
+        position: absolute;
+        border-right:1px solid #e8e8e8;
+        left:0;
+        @include cz;
+      }
+      .userPwdLabel{
+        background: url(/img/login/suo.png) no-repeat center;
+      }
+      >input{
+        width: 261px;
+        height: 100%;
+        line-height: 38px;
+        padding-left:10px;
+        border-radius: 5px;
+        position: absolute;
+        left: 37px;
+      }
+    }
+    .login_btn{
+      width:300px;
+      height:38px;
+      border-radius: 5px;
+      background-color: #b4a078;
+      color:#fff;
+      font-size: 18px;
+      margin-top:24px;
+      margin-bottom:62px;
+    }
+    .hint{
+      color:red;
+      line-height: 20px;
+      height:20px;
+      text-align: left;
+      margin-left:42px;
+    }
+  }
+  .login_foot{
+    height:61px;
+    width:100%;
+    background-color: #f5f3ef;
+    padding-right:30px;
+    p{
+      margin-left:40px;
+      float: left;
+      a{
+        display: inline-block;
+        width:24px;
+        height:18px;
+        margin-top:22px;
+        margin-right:20px;
+        background:url(/img/login/links.png) no-repeat -10px -10px;
+        &:hover{
+          background-position-y: -49px;
+        }
+      }
+      a:nth-child(2){
+        background-position-y: -248px;
+        width:18px;
+        height:24px;
+        &:hover{
+          background-position-y: -292px;
+        }
+      }
+      a:nth-child(3){
+        background-position-y: -128px;
+        width:24px;
+        height:20px;
+        &:hover{
+          background-position-y: -208px;
+        }
+      }
+      a:nth-child(4){
+        background-position-y: -88px;
+        width:17px;
+        height:21px;
+        &:hover{
+          background-position-y: -168px;
+        }
+      }
+    }
+    a{
+      float: right;
+      line-height: 60px;
+      color:nth($color,1);
+      &:hover{
+        color:nth($color,4);
+      }
+    }
+  }
+}

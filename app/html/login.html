@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <script src="/libs/require.js" data-main="/js/login.js"></script>
+</head>
+<body>
+  <div class="lgBox">
+    <form class="login" id="login">
+      <h1><a href="javascript:;" class="loginActive" id="tellLogin">手机号登录</a>|<a href="javascript:;" id="emailLogin">邮箱登录</a></h1>
+      <div class="group">
+        <label for="userName" class="userNameLabel"></label>
+        <input type="text" name="userName" id="userName" class="userName" placeholder="请输入手机号">
+      </div>
+      <div class="group">
+        <label for="userName" class="userPwdLabel"></label>
+        <input type="password" name="userPwd" id="userPwd" class="userPwd" placeholder="请输入密码">
+      </div>
+      <p class="hint" id="hint"></p>
+      <input type="button" id="login_btn" value="登录" class="login_btn">
+    </form>
+    <div class="login_foot">
+      <p>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+      </p> 
+      <a href="/html/register.html" id="rg">注册</a>
+    </div>
+  </div>
+</body>
+</html>

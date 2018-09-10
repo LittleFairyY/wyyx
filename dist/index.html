@@ -18,11 +18,12 @@
       <div class="nextBtn" id="nextBtn"></div>
     </div>
     <ul id="slider">
-      <li><a href="javascript:void(0)"><img src="/img/index/5d4661aea523f539e1ec8bab56bd0e71.jpg" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="/img/index/81c4fedd3054378c9ea022861a3d6ae1.jpg" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="/img/index/55ec871808ce4fb40bf435d1cf1e9ce4.jpg" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="/img/index/a38573fd5e482fb7b14f782dcb41cc57.jpg" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="/img/index/262835d7d941bffaaf27766ec6c999fa.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/banner1.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/banner2.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/banner3.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/banner4.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/banner5.jpg" alt=""></a></li>
+      <li><a href="javascript:void(0)"><img src="/img/index/banner6.jpg" alt=""></a></li>
     </ul>
     <ol>
     </ol>
@@ -62,14 +63,16 @@
   <!-- 新品 -->
   <div class="newPro w" id="newPro">
     <h1 class="litterTitle"><span>新品首发</span> <span>为你寻觅时间好物</span><a href="javascript:void(0)">更多制造商 ></a></h1>
-    <div class="newImg" id="newImg">
+    <div class="newImg w" id="newImg">
+      <div class="new_prve"></div>
       <ul>
       </ul>
+      <div class="new_next"></div>
     </div>
   </div>
   <!-- 人气推荐 -->
   <div class="hotProBox">
-    <div class="hotPro w" id="hotPros">
+    <div class="hotPros w" id="hotPros">
         <h1 class="litterTitle">
           <span>人气推荐</span> 
           <span>
@@ -87,11 +90,28 @@
         </div>
     </div>
   </div>
+  <!-- 限时购 -->
+  <div class="time_to_buy w">
+    <h1 class="litterTitle">
+      <span>限时购</span>
+      <a href="javascript:void(0)">更多抢购 ></a>
+    </h1>
+    <div class="timeBox fl" id="timeBox">
+      <h3><span>18</span>点场</h3>
+      <div class="line"></div>
+       <span>距离结束还有：</span>
+       <p><span>03</span>:<span>21</span>:<span>42</span></p>
+       <a href="javascript:void()">查看全部 ></a>
+    </div>
+    <div class="time_left fr" id="time_left">
+    </div>
+  </div> 
   <!-- 尾部 -->
   <footer id="footer"></footer>
+
   <script type="text/html" id="list">
     <li>
-        <a href="javascript:void(0)">
+        <a href="javascript:;" data-index={{data.id}}>
           <img src={{data.img[0]}} alt="">
           <h2>{{data.proName}}</h2>
           <p>
@@ -103,9 +123,10 @@
         </a>
     </li>
   </script>
+
   <script type="text/html" id="hotPro">
     <li>
-      <a href="javascript:void(0)">
+      <a href="javascript:void(0)" data-index={{data.id}}>
           <img src={{data.img[0]}} alt="">
         <div>
             <h2>{{data.proName}}</h2>
@@ -116,6 +137,24 @@
         </div>
       </a>
     </li>
+  </script>
+  
+  <script type="text/html" id="timePro">
+    <a href="javascript:;" data-index={{data.id}}>
+      <dl>
+        <dt>
+          <img src={{data.img[0]}} alt="">
+        </dt>
+        <dd>
+          <h5>{{data.proName}}</h5>
+          <div class="t_description">{{data.description}}</div>
+          <div class="t_repertory"><div class="t_progress"><i></i></div>还剩{{data.repertory}}件</div>
+          <div class="t_priceBox">限时价<span class="t_price">￥{{data.xprice}}</span> <span class="t_oldPrice">原价￥{{data.yprice}}</span></div>
+          <button>立即抢购</button>
+          <p><span>已售光</span></p>
+        </dd>
+      </dl>
+    </a>
   </script>
 </body>
 </html>

@@ -1,1 +1,1 @@
-"use strict";define(function(){return{url:"http://localhost/wyyxapi"}});
+"use strict";define(function(){return{url:"http://localhost:8020/wyyxapi"}});

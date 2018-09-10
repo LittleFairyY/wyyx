@@ -1,0 +1,115 @@
+@mixin cz {
+  top:0;bottom:0;margin:auto;
+}
+$color:#999999 #333333 #dddddd #b4a078 #d4282d;
+.main{
+  background-color: #f5f5f5;
+  padding-bottom:30px;
+  .crumbs{
+    height:52px;
+    line-height: 52px;
+    color:nth($color,3);
+    a{
+      color:nth($color,2);
+    }
+  }
+  .banner{
+    height:310px;
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
+  .allpro{
+    margin-top:30px;
+    background-color: #fff;
+    padding:10px 42px;
+    .proNav{
+      height:168px;
+      ul{
+        li{
+          height:58px;
+          line-height:58px;
+          .title{
+            width:100px;
+            span{
+              float:left;
+              color:nth($color,1);
+            }
+            span+span{
+              float:right;
+              color:nth($color,4);
+            }
+          }
+          .proItem{
+            a{
+              margin-left:32px;
+              color:nth($color,1);
+            }
+          }
+        }
+        li+li{
+          border-top:1px dashed nth($color,3);
+        }
+      }
+    }
+    .pro_show{
+      .pro_tile{
+        padding-top:40px;
+        h1{
+          text-align: center;
+          font-size: 30px;
+        }
+        p{
+          text-align: center;
+          color:nth($color,1);
+          margin:26px 0 44px 0;
+        }
+      }
+      .pro{
+        li{
+          width:245px;
+          height:380px;
+          text-align: center;
+          display: inline-block;
+          margin-right:10px;
+          margin-bottom:36px;
+          img{
+            width:245px;
+            height:245px;
+          }
+          .zk{
+            width:34px;
+            height:20px;
+            background-color: nth($color,4);
+            color:#fff;
+            margin:10px auto;
+            line-height: 20px;
+            text-align: center;
+          }
+          .proName{
+            color:nth($color,2);
+            font-weight: 600;
+            text-align: center;
+          }
+          .proPrice{
+            text-align: center;
+            color:nth($color,5);
+            width:130px;
+            margin:0 auto;
+            line-height: 36px;
+            border-bottom:1px solid nth($color,3);
+          }
+          p{
+            text-align: center;
+            line-height: 52px;
+            color:nth($color,1);
+          }
+        }
+        li:nth-child(4n){
+          margin-right:0;
+        }
+      }
+    }
+  }
+}

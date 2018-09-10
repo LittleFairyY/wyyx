@@ -1,0 +1,80 @@
+.main {
+  background-color: #f5f5f5;
+  padding-bottom: 30px; }
+  .main .crumbs {
+    height: 52px;
+    line-height: 52px;
+    color: #dddddd; }
+    .main .crumbs a {
+      color: #333333; }
+  .main .banner {
+    height: 310px; }
+    .main .banner img {
+      width: 100%;
+      height: 100%; }
+  .main .allpro {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 10px 42px; }
+    .main .allpro .proNav {
+      height: 168px; }
+      .main .allpro .proNav ul li {
+        height: 58px;
+        line-height: 58px; }
+        .main .allpro .proNav ul li .title {
+          width: 100px; }
+          .main .allpro .proNav ul li .title span {
+            float: left;
+            color: #999999; }
+          .main .allpro .proNav ul li .title span + span {
+            float: right;
+            color: #b4a078; }
+        .main .allpro .proNav ul li .proItem a {
+          margin-left: 32px;
+          color: #999999; }
+      .main .allpro .proNav ul li + li {
+        border-top: 1px dashed #dddddd; }
+    .main .allpro .pro_show .pro_tile {
+      padding-top: 40px; }
+      .main .allpro .pro_show .pro_tile h1 {
+        text-align: center;
+        font-size: 30px; }
+      .main .allpro .pro_show .pro_tile p {
+        text-align: center;
+        color: #999999;
+        margin: 26px 0 44px 0; }
+    .main .allpro .pro_show .pro li {
+      width: 245px;
+      height: 380px;
+      text-align: center;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 36px; }
+      .main .allpro .pro_show .pro li img {
+        width: 245px;
+        height: 245px; }
+      .main .allpro .pro_show .pro li .zk {
+        width: 34px;
+        height: 20px;
+        background-color: #b4a078;
+        color: #fff;
+        margin: 10px auto;
+        line-height: 20px;
+        text-align: center; }
+      .main .allpro .pro_show .pro li .proName {
+        color: #333333;
+        font-weight: 600;
+        text-align: center; }
+      .main .allpro .pro_show .pro li .proPrice {
+        text-align: center;
+        color: #d4282d;
+        width: 130px;
+        margin: 0 auto;
+        line-height: 36px;
+        border-bottom: 1px solid #dddddd; }
+      .main .allpro .pro_show .pro li p {
+        text-align: center;
+        line-height: 52px;
+        color: #999999; }
+    .main .allpro .pro_show .pro li:nth-child(4n) {
+      margin-right: 0; }

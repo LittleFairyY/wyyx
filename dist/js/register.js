@@ -1,0 +1,1 @@
+"use strict";require(["config"],function(){require(["check"],function(c){$(function(){c.check()})})});
