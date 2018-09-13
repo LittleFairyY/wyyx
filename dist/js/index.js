@@ -1,1 +1,21 @@
-"use strict";require(["config"],function(){require(["jquery","base","slider","getNewPro","getHotPro","getTimePro"],function(e,t,r,a,n,i){e(function(){t.head(),t.foot(),r.slider(e("#banner")),a.getData(),a.change(),n.getData("bjtj","bjz"),n.change(),i.getData()})})});
+require(['config'],function(){
+    require(['jquery','base',"slider","getNewPro","getHotPro","getTimePro"],function($,base,slider,getNewPro,getHotPro,getTimePro){
+      $(function(){
+        //头部
+        base.head();
+        //尾部
+        base.foot();
+        //轮播图
+        slider.slider($("#banner"));
+        //新品首发
+        getNewPro.getData();
+        getNewPro.change();
+
+        //热门推荐
+        getHotPro.getData("bjtj","bjz");
+        getHotPro.change();
+        //限时抢购
+        getTimePro.getData();
+      });
+    });
+});

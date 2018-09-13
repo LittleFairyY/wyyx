@@ -12,7 +12,11 @@ require.config({
     "getHotPro":"module/getHotPro",
     "getTimePro":"module/getTimePro",
     "change":"module/change",
-    "check":"module/check"
+    "check":"module/check",
+    "getPro":"module/getpro",
+    "checkLogin":"module/checkLogin",
+    "getCar":"module/getCar",
+    "getListNav":"module/getListNav"
   },
   shim:{
     cookie:{
@@ -37,6 +41,12 @@ require.config({
       deps:["jquery"]
     },
     check:{
+      deps:["jquery"]
+    },
+    getListNav:{
+      deps:["jquery"]
+    },
+    getCar:{
       deps:["jquery"]
     }
   }

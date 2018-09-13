@@ -1,1 +1,45 @@
-"use strict";define(["template","url"],function(e,t){function n(){this.index=0,this.page=0}return n.prototype.getData=function(){var n=this;$.get(t.url+"/v1/getNewPro.php",{index:this.index},function(t){console.log(1),$("#newPro").find("ul").html(""),n.page=t.allCount,$.each(t.data,function(n,t){t.img=t.img.split(",");var i=e("list",{data:t});$("#newPro").find("ul").append($(i))}),$("#newImg").find("ul li").hover(function(){var n=$(this).index();$(this).addClass("ac").find("a img").attr("src",t.data[n].img[1])},function(){var n=$(this).index();$(this).removeClass("ac").find("a img").attr("src",t.data[n].img[0])})},"json")},n.prototype.change=function(){var n=this;$(".new_prve").on("click",function(){n.index--,n.index<0&&(n.index=Math.ceil(n.page/4)-1),n.getData()}),$(".new_next").on("click",function(){n.index++,n.index>=Math.ceil(n.page/4)&&(n.index=0),n.getData()})},new n});
+define(["template","url"],function(template,url) {
+  function GetNewPro(){
+    this.index=0;
+    this.page=0;
+  };
+  GetNewPro.prototype.getData=function(){
+    var that=this;
+    $.get(url.url+"/v1/getNewPro.php",{index:this.index},function(datas){
+      $("#newImg").find("ul").html("");
+      that.page=datas.allCount;
+      $.each(datas.data,function(index,data){
+        data.img=data.img.split(",");
+        var $str =template("list",{data:data});
+        //加入ul
+        $("#newImg").find("ul").append($($str));
+      })
+      //鼠标移上效果
+      $("#newImg").find("ul li").hover(function(){
+        var $index=$(this).index();
+        $(this).addClass("ac").find("a img").attr("src",datas.data[$index].img[1])
+      },function(){
+        var $index=$(this).index();
+        $(this).removeClass("ac").find("a img").attr("src",datas.data[$index].img[0])
+      });
+    },"json");
+  }
+  GetNewPro.prototype.change=function(){
+    var that=this;
+    $(".new_prve").on("click",function(){
+      that.index--;
+      if(that.index<0){
+        that.index=Math.ceil(that.page/4)-1;
+      }
+      that.getData();
+    });
+    $(".new_next").on("click",function(){
+      that.index++;
+      if(that.index>=Math.ceil(that.page/4)){
+        that.index=0;
+      }
+      that.getData();
+    });
+  }
+  return new GetNewPro();
+});

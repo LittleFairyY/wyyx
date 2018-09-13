@@ -1,1 +1,11 @@
-"use strict";require(["config"],function(){require(["jquery","base","check"],function(e,i,n){e(function(){i.head(),n.init(),i.foot()})})});
+require(['config'],function(){
+  require(['jquery','base','check'],function($,base,check){
+    $(function(){
+      //头部
+      base.head();
+      check.init()
+      //尾部
+      base.foot();
+    });
+  });
+});

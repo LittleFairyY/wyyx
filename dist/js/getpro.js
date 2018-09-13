@@ -1,0 +1,1 @@
+"use strict";define(["url"],function(o){console.log(123);var n=window.location.search.split("=")[1];$.get(o.url+"/v1/getData.php",{id:n},function(o){console.log(o)},"json")});

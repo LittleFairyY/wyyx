@@ -1,1 +1,11 @@
-"use strict";require(["config"],function(){require(["jquery","url"],function(c,i){c(function(){console.log(123);var i=window.location.search.split("=")[1];c.get("http://localhost:8020/wyyxapi/v1/getData.php",{id:i},function(i){c.each(i.data,function(i,a){a.img=a.img.split(",");var t=c('<img src="" alt="">\n          <div class="proName">'.concat(a.proName,'</div>\n          <div class="price">').concat(a.xprice,"</div>"));c("#box").append(t),c(".proName").eq(i).attr("data-index",a.id)})},"json")})})});
+require(["config"],function(){
+  require(["jquery",'base','getPro'],function($,base,getPro){
+    $(function(){
+      //头部
+      base.head();
+      getPro.getData();
+      //尾部
+      base.foot();
+    })
+  })
+})

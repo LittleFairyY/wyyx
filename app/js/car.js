@@ -1,0 +1,17 @@
+require(['config'],function(){
+  require(['jquery','base',"checkLogin","getNewPro","getCar"],function($,base,checkLogin,getNewPro,getCar){
+    $(function(){
+      //头部
+      base.head();
+      //验证是否登录
+      checkLogin.checkLogin();
+      //获取购物车
+      getCar.getData();
+      //猜你喜欢
+      getNewPro.getData();
+      getNewPro.change();
+      //尾部
+      base.foot();
+    });
+  });
+});

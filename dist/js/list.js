@@ -1,1 +1,12 @@
-"use strict";require(["config"],function(){require(["jquery","base","slider"],function(e,i,n){e(function(){i.head(),i.foot()})})});
+require(['config'],function(){
+  require(['jquery','base',"slider","getListNav"],function($,base,slider,getListNav){
+    $(function(){
+      //头部
+      base.head();
+      //获取自导航
+      getListNav.getData();
+      //尾部
+      base.foot();
+    });
+  });
+});

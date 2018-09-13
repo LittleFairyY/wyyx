@@ -6,14 +6,13 @@ define(["template","url"],function(template,url) {
   GetNewPro.prototype.getData=function(){
     var that=this;
     $.get(url.url+"/v1/getNewPro.php",{index:this.index},function(datas){
-      console.log(1)
-      $("#newPro").find("ul").html("");
+      $("#newImg").find("ul").html("");
       that.page=datas.allCount;
       $.each(datas.data,function(index,data){
         data.img=data.img.split(",");
         var $str =template("list",{data:data});
         //加入ul
-        $("#newPro").find("ul").append($($str));
+        $("#newImg").find("ul").append($($str));
       })
       //鼠标移上效果
       $("#newImg").find("ul li").hover(function(){

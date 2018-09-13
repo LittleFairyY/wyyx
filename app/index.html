@@ -111,7 +111,7 @@
 
   <script type="text/html" id="list">
     <li>
-        <a href="javascript:;" data-index={{data.id}}>
+        <a href="/html/details.html?id={{data.id}}">
           <img src={{data.img[0]}} alt="">
           <h2>{{data.proName}}</h2>
           <p>
@@ -126,21 +126,21 @@
 
   <script type="text/html" id="hotPro">
     <li>
-      <a href="javascript:void(0)" data-index={{data.id}}>
+      <a href="/html/details.html?id={{data.id}}">
           <img src={{data.img[0]}} alt="">
         <div>
-            <h2>{{data.proName}}</h2>
-            <span class="price">￥{{data.xprice}}</span> 
-            {{if data.yprice}}
-            <span class="oldPrice">￥{{data.yprice}}</span>
-            {{/if}}
+          <h2>{{data.proName}}</h2>
+          <span class="price">￥{{data.xprice}}</span> 
+          {{if data.yprice}}
+          <span class="oldPrice">￥{{data.yprice}}</span>
+          {{/if}}
         </div>
       </a>
     </li>
   </script>
   
   <script type="text/html" id="timePro">
-    <a href="javascript:;" data-index={{data.id}}>
+    <a href="/html/details.html?id={{data.id}}">
       <dl>
         <dt>
           <img src={{data.img[0]}} alt="">

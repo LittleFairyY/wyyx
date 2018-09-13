@@ -1,0 +1,150 @@
+@mixin cz {
+  top:0;bottom:0;margin:auto;
+}
+$color:#999999 #333333 #dddddd #b4a078 #d4282d;
+.main{
+  .crumbs{
+    height:52px;
+    line-height: 52px;
+    color:nth($color,1);
+    a{
+      color:nth($color,2);
+    }
+  }
+  .proinfo_show{
+    height:605px;
+    .proinfo_left{
+      width:522px;
+      height:430px;
+      >img{
+        border:1px solid #e8e8e8;
+        width:430px;
+        height:100%;
+        float:left;
+      }
+      ul{
+        float:right;
+        width:78px;
+        li{
+          width:78px;
+          height:78px;
+          margin-bottom:10px;
+          // border:1px solid #e8e8e8;
+          img{
+            width:100%;
+            height:100%;
+          }
+        }
+        .bor{
+          border:1px solid nth($color,4);
+        }
+      }
+    }
+    .proinfo_right{
+      width:505px;
+      >.shops{
+        // width:70px;
+        height:20px;
+        padding:0 10px;
+        background-color: #f5f3ef;
+        border:1px solid #b19e7a;
+        color:#b19e7a;
+        text-align: center;
+        line-height: 20px;
+      }
+      >h1{
+        height:40px;
+        line-height: 40px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      >p{
+        height:35px;
+        color:nth($color,1);
+      }
+      .proinfo{
+        height:230px;
+        background-color: #f5f3ef;
+        padding:12px;
+        border-bottom:1px dotted #d9d8d7;
+        >p{
+          height:42px;
+          line-height: 42px;
+          color:nth($color,1);
+          span{
+            margin-right:30px;
+            float: left;
+          }
+          a{
+            display: block;
+            overflow: hidden;
+            color:nth($color,1);
+            line-height: 20px;
+            padding-top:6px;
+            margin-right:112px;
+          }
+          .price{
+            color:nth($color,5);
+            font-size: 22px;
+            font-weight: 600;
+          }
+          .juan{
+            display: inline-block;
+            width:145px;
+            height:20px;
+            padding-left:7px;
+            line-height: 20px;
+            border:1px solid #efb0b3;
+            color:nth($color,5);
+            border-radius: 4px;
+            background:#fff url(/img/detail/coupon-s823df166ea-917b2d915b.png) no-repeat 110px -135px;
+            i{
+              float:right;
+              margin-right:7px;
+            }
+          }
+          .jian{
+            color:nth($color,5);
+          }
+        }
+        >p:last-child{
+          border-top:1px dashed #d9d8d7;
+        }
+      }
+      >.btn{
+        margin-top:20px;
+        button{
+          width:168px;
+          height:50px;
+          float: left;
+          margin-right:10px;
+          background-color: #f5f3ef;
+          border:1px solid #d9cfbb;
+          border-radius: 3px;
+          color:nth($color,4);
+        }
+        button+button{
+          color:#fff;
+          background-color: nth($color,4);
+          i{
+            display: inline-block;
+            width:32px;
+            height:24px;
+            vertical-align: middle;                                                     
+            background:url(/img/detail/cart-s0ad41292b3-851852ecbd.png) no-repeat 2px -64px
+          }
+        }
+        span{
+          float: left;
+          width:50px;
+          height:50px;
+          line-height: 50px;
+          margin-right:10px;
+          border:1px solid nth($color,1);
+          color:nth($color,1);
+          text-align: center;
+        }
+      }
+    }
+  }
+}

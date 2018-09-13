@@ -23,10 +23,10 @@ define([
           });
           
 
-        $("#time_left a").on("click",function(){
-          var id=$(this).attr("data-index");
-          window.location.href="/html/xi.html?id="+id;
-        })
+        // $("#time_left a").on("click",function(){
+        //   var id=$(this).attr("data-index");
+        //   window.location.href="/html/xi.html?id="+id;
+        // })
       },"json")
     });
   }

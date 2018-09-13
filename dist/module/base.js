@@ -1,1 +1,66 @@
-"use strict";define(["url","cookie"],function(a){return{head:function(){$("#header").load("/html/header.html #head",function(){$.cookie("userTell")?($("#isdl").html($.cookie("userTell")),$("#navLogin").attr("href","javascript:;")):$("#isdl").html('<a href="/html/denglu.html">登录</a>\n                        <a href="/html/denglu.html?mated=ze">注册</a><span>|</span>\n                        ');var t=$("#header_top").height()+$("#logobox").height();$(window).on("scroll",function(){$(window).scrollTop()>=t?$("#navfxied").addClass("navfxied"):$("#navfxied").removeClass("navfxied")}),$.get(a.url+"/v1/getNav.php",{sid:0},function(t){var e="";$.each(t.data,function(t,a){""==window.location.search&&$.cookie("index",1),a.id==$.cookie("index")?e+='<li><a href="/html/list.html?type='.concat(a.id,'" class="active" data-index=\'').concat(a.id,"' data-type='").concat(a.type,"'>").concat(a.navName,"</a></li>"):e+='<li><a href="/html/list.html?type='.concat(a.id,"\" data-index='").concat(a.id,"' data-type='").concat(a.type,"'>").concat(a.navName,"</a></li>")}),$("#nav").html(e).find("li a").on("click",function(){$.cookie("index",$(this).attr("data-index"),{path:"/"})})},"json")})},foot:function(){$("#footer").load("/html/footer.html #foot")}}});
+define(["url","cookie"],function(url) {
+  return {
+    head:function(){
+     $("#header").load("/html/header.html #head",function(){
+       //是否登录
+       if($.cookie("userId")){
+        $("#isdl").html($.cookie("userTell"));
+        $("#navLogin").attr("href","javascript:;");
+       }else{
+        $("#isdl").html(`<a href="/html/denglu.html">登录</a>
+                        <a href="/html/denglu.html?mated=ze">注册</a><span>|</span>
+                        `);
+       }
+      var $height=$("#header_top").height()+$("#logobox").height();
+      //固定导航
+      $(window).on("scroll",function(){
+        if($(window).scrollTop()>=$height){
+          $("#navfxied").addClass("navfxied");
+        }else{
+          $("#navfxied").removeClass("navfxied");
+        }
+      });
+      // nav样式
+      $.get(url.url+"/v1/getNav.php",{"sid":0},function(datas){
+        var str="";
+        $.each(datas.data,function(index,val){
+          if(window.location.search==""){
+            $.cookie("index",1,{path:"/"});
+          }
+          if(val.id==1){
+            // $.cookie("index")=val.id;
+            if( $.cookie("index")==1){
+              str+=`<li><a href="/index.html" class='active' data-index='${val.id}' data-type='${val.type}'>${val.navName}</a></li>`;
+            }else{
+              str+=`<li><a href="/index.html" data-index='${val.id}' data-type='${val.type}'>${val.navName}</a></li>`;
+            }
+          }else if(val.id==$.cookie("index")){
+            str+=`<li><a href="/html/list.html?type=${val.id}" class="active" data-index='${val.id}' data-type='${val.type}'>${val.navName}</a></li>`;
+          }else{
+            str+=`<li><a href="/html/list.html?type=${val.id}" data-index='${val.id}' data-type='${val.type}'>${val.navName}</a></li>`;
+          }
+        });
+        $("#nav").html(str).find("li a").on("click",function(){
+          $.cookie("index",$(this).attr("data-index"),{path:"/"});
+        });
+
+      },"json");
+       //购物车
+       $.get(url.url+"/v1/getCar.php",{"userId":$.cookie("userId")},function(datas){
+        $(".count").html(datas.allCount).parent().on("click",function(){
+          if($.cookie("userId")){
+            window.location.href="/html/car.html";
+          }else{
+            if(confirm("请登录！")){
+              window.location.href="/html/denglu.html";
+            }
+          }
+        });
+       },"json");
+     });
+    },
+    foot:function(){
+      $("#footer").load("/html/footer.html #foot");
+    }
+  }
+});

@@ -101,6 +101,7 @@ $color:#999999 #333333 #dddddd #b4a078 #d4282d;
             border-bottom:1px solid nth($color,3);
           }
           p{
+            height:52px;
             text-align: center;
             line-height: 52px;
             color:nth($color,1);
@@ -109,6 +110,13 @@ $color:#999999 #333333 #dddddd #b4a078 #d4282d;
         li:nth-child(4n){
           margin-right:0;
         }
+      }
+      .update{
+        height:25px;
+        line-height: 25px;
+        text-align: center;
+        color:nth($color,1);
+        font-size: 25px;
       }
     }
   }

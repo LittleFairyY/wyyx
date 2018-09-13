@@ -1,1 +1,34 @@
-"use strict";define(["url","template"],function(t,n){function e(){}return e.prototype.getData=function(){$(function(){$.get(t.url+"/v1/getTimePro.php",function(t){$.each(t.data,function(t,e){e.img=e.img.split(",");var i=n("timePro",{data:e});$("#time_left").append($(i));var r=Number(e.allRepertory-Number(e.repertory))/Number(e.allRepertory);1==r&&($("#time_left a").eq(t).find("button").remove(),$("#time_left a").eq(t).find("p").show()),$("#time_left a").eq(t).find(".t_progress i").css("width",$(".t_progress:eq(0)").outerWidth()*r)}),$("#time_left a").on("click",function(){var t=$(this).attr("data-index");window.location.href="/html/xi.html?id="+t})},"json")})},new e});
+define([
+  'url',
+  'template'
+], function(url, template) {
+  function GetTimePro(){}
+  GetTimePro.prototype.getData=function(){
+    $(function(){
+      $.get(url.url+"/v1/getTimePro.php",function(datas){
+        $.each(datas.data,function(index,data1){
+          data1.img=data1.img.split(",");
+            var $str=template("timePro",{data:data1});
+            $("#time_left").append($($str));
+            //进度条的比例
+            var bi=Number((data1.allRepertory)-Number(data1.repertory))/Number(data1.allRepertory);
+            //如果比例等于1代表已卖完
+            if(bi==1){
+              $("#time_left a").eq(index).find("button").remove();
+              $("#time_left a").eq(index).find("p").show();
+            }
+            //进度条样式
+            $("#time_left a").eq(index).find(".t_progress i").css("width",$(".t_progress:eq(0)").outerWidth()*bi);
+            // var time=$()
+          });
+          
+
+        // $("#time_left a").on("click",function(){
+        //   var id=$(this).attr("data-index");
+        //   window.location.href="/html/xi.html?id="+id;
+        // })
+      },"json")
+    });
+  }
+  return new GetTimePro();
+});

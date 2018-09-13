@@ -13,7 +13,11 @@ gulp.task("css",function(){
 })
 gulp.task("js",function(){
   //除了libs中的js以外
-  gulp.src(["app/**/*.js","!app/libs/*.js"]).pipe(babel({presets:['@babel/env']})).pipe(uglifyJs()).pipe(gulp.dest("dist")).pipe(connect.reload());
+  gulp.src(["app/**/*.js","!app/libs/*.js"])
+  // .pipe(babel({presets:['@babel/env']}))
+  // .pipe(uglifyJs())
+  .pipe(gulp.dest("dist"))
+  .pipe(connect.reload());
 })
 gulp.task("libs",function(){
   gulp.src("app/libs/**/*").pipe(gulp.dest("dist/libs"));

@@ -73,8 +73,15 @@
         line-height: 36px;
         border-bottom: 1px solid #dddddd; }
       .main .allpro .pro_show .pro li p {
+        height: 52px;
         text-align: center;
         line-height: 52px;
         color: #999999; }
     .main .allpro .pro_show .pro li:nth-child(4n) {
       margin-right: 0; }
+    .main .allpro .pro_show .update {
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      color: #999999;
+      font-size: 25px; }

@@ -1,8 +1,10 @@
 require(['config'],function(){
-  require(['jquery','base',"slider"],function($,base,slider,){
+  require(['jquery','base',"slider","getListNav"],function($,base,slider,getListNav){
     $(function(){
       //头部
       base.head();
+      //获取自导航
+      getListNav.getData();
       //尾部
       base.foot();
     });

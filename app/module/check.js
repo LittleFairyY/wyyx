@@ -98,10 +98,11 @@ define(["url","cookie","md5"],function(url,cookie){
       var userTell=$("#userName").val(),
           userPwd=hex_md5($("#userPwd").val());
       $.get(url.url+"/v1/userLogin.php",{"userName":userTell,"userPwd":userPwd},function(datas){
-        if(datas.code!=1){
+        if(datas.data.length==0){
           $("#hint").html("请输入正确的用户名和密码！");
         }else{
-          $.cookie("userTell",userTell,{path:"/"});
+          $.cookie("userTell",datas.data[0].userTell,{path:"/"});
+          $.cookie("userId",datas.data[0].userId,{path:"/"});
           parent.location.href="/index.html";
         }
       },"json")

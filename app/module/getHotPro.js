@@ -10,7 +10,7 @@ define(["url","template"],function(url,template) {
           $("#hotPros_right").append($($str));
         }else{
           $("#hotPros_left").html("");
-          var str=$(`<a href="javascript:void(0)">
+          var str=$(`<a href="/html/details.html?id=${data1.id}">
                       <img src="${data1.img[0]}" alt="">
                       <div>
                         <h2>${data1.proName}</h2>
@@ -19,7 +19,6 @@ define(["url","template"],function(url,template) {
                     </a>`)
           $("#hotPros_left").append(str)
         }
-        
       })
      },"json")
    }

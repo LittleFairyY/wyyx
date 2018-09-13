@@ -18,7 +18,7 @@
       <!-- banner图 -->
       <div class="banner w"><img src="/img/list/banner1 .jpg" alt=""></div>
       <!-- pro部分 -->
-      <div class="allpro w">
+      <div class="allpro w" id="allpro">
         <!-- proNav -->
         <div class="proNav">
           <ul>
@@ -27,12 +27,7 @@
                 <span>分类：</span>
                 <span>全部</span>
               </div>
-              <div class="proItem fl">
-                <a href="javascript:;">床品件套</a>
-                <a href="javascript:;">被套</a>
-                <a href="javascript:;">家具</a>
-                <a href="javascript:;">灯具</a>
-                <a href="javascript:;">收纳</a>
+              <div class="proItem fl" id="proItem">
               </div>
             </li>
             <li>
@@ -64,10 +59,10 @@
           </ul>
         </div>
         <!-- pro显示 -->
-        <div class="pro_show">
+        <!-- <div class="pro_show">
           <div class="pro_tile">
             <h1>床品件套</h1>
-            <p>床品件套</p>
+            <p>MUJI等品牌制造商出品</p>
           </div>
           <ul class="pro">
             <li>
@@ -113,10 +108,35 @@
               <p>经典暖色调配色，随性美式加身</p>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- 尾部 -->
   <footer id="footer"></footer>
+  <script type="text/html" id="pro_title">
+    {{each data val index}}
+    <div class="pro_show" id="{{val.id}}">
+      <div class="pro_tile">
+        <h1>{{val.navName}}</h1>
+        <p>{{val.description}}</p>
+      </div>
+      <ul class="pro">
+      </ul>
+    </div>
+    {{/each}}
+  </script>
+  <script type="text/html" id="pro_info">
+    {{each data val index}}
+    <li>
+      <a href="/html/details.html?id={{val.id}}">
+        <img src="{{val.img[0]}}" alt="">
+        <div class="zk">新品</div>
+        <div class="proName">{{val.proName}}</div>
+        <div class="proPrice">￥{{val.xprice}}</div>
+        <p>{{val.description}}</p>
+      </a>
+    </li>
+    {{/each}}
+  </script>
 </body>
 </html>

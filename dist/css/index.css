@@ -146,69 +146,6 @@
     .manuFacturer .makeImg > div:hover {
       background-size: 102%; }
 
-.newPro {
-  margin-top: 40px; }
-  .newPro .newImg {
-    position: relative; }
-    .newPro .newImg .new_prve {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: url(../img/index/icon4.png) no-repeat 0 -2389px;
-      position: absolute;
-      left: -15px;
-      z-index: 5;
-      top: 0;
-      bottom: 0;
-      margin: auto; }
-    .newPro .newImg .new_next {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: url(../img/index/icon4.png) no-repeat 0 -4329px;
-      position: absolute;
-      right: -15px;
-      z-index: 5;
-      top: 0;
-      bottom: 0;
-      margin: auto; }
-    .newPro .newImg > .new_prve:hover {
-      background-position-y: -2347px; }
-    .newPro .newImg > .new_next:hover {
-      background-position-y: -4289px; }
-    .newPro .newImg > ul {
-      height: 398px; }
-      .newPro .newImg > ul > li {
-        width: 25%;
-        float: left;
-        height: 344px; }
-        .newPro .newImg > ul > li a {
-          display: block;
-          width: 100%;
-          height: 100%;
-          text-align: center; }
-          .newPro .newImg > ul > li a img {
-            width: 100%; }
-          .newPro .newImg > ul > li a h2 {
-            margin-top: 20px;
-            font-weight: 600;
-            color: #333333;
-            text-align: center; }
-          .newPro .newImg > ul > li a h2:hover {
-            color: #b4a078; }
-          .newPro .newImg > ul > li a p {
-            text-align: center;
-            margin-top: 12px; }
-            .newPro .newImg > ul > li a p .price {
-              color: #d4282d; }
-            .newPro .newImg > ul > li a p .shops {
-              color: #999999;
-              padding-left: 12px;
-              border-left: 1px solid #999999;
-              margin-left: 8px; }
-      .newPro .newImg > ul .ac {
-        background-color: #f4f0ea; }
-
 .hotProBox {
   width: 100%;
   height: 698px;

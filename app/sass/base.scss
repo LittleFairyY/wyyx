@@ -11,12 +11,51 @@ $font-size:12px;
   font-size: $font-size;
   color:#fff;
 }
+@mixin h2 {
+  margin-top:20px;
+  font-weight: 600;
+  color:$bgcolor;
+  text-align: center;
+}
+@mixin cz {
+  top:0;bottom:0;margin:auto;
+}
+@mixin  iBlock($width,$height,$lineHeight) {
+  position: absolute;
+  text-align: center;
+  width:$width;
+  height:$height;
+  line-height: $lineHeight;
+  font-size: $font-size;
+  color:#fff;
+}
+@mixin prevBtn {
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  background: url(../img/index/icon4.png) no-repeat 0 -2389px;
+  position: absolute;
+  left:-15px;
+  z-index: 5;
+  @include cz;
+}
+@mixin nextBtn {
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  background: url(../img/index/icon4.png) no-repeat 0 -4329px;
+  position: absolute;
+  right:-15px;
+  z-index: 5;
+  @include cz;
+}
 /*重置样式 start*/
 html, body, ul,a, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, div ,header,nav,footer,figure,figcaption,section,main,input{
   margin:0; 
   padding:0; 
   box-sizing:border-box;
   font-size: $font-size;
+  user-select: none;
   font-family: "Microsoft Yahei","微软雅黑",verdana;
 }
 body{
@@ -233,7 +272,7 @@ margin:0 auto;
         }
       }
       //购物车
-      span{
+      a{
         display: block;
         float:right;
         width:35px;
@@ -254,6 +293,7 @@ margin:0 auto;
   //nav start
   .navbox{
     height:70px;
+    box-shadow: 0px 3px 13px -5px #666;
     .navLogo{
       display: none;
     }
@@ -347,6 +387,61 @@ margin:0 auto;
     }
   }
 }
+//新品首发
+  .newImg{
+    position: relative;
+    .new_prve{
+      @include prevBtn;
+    }
+    .new_next{
+      @include nextBtn;
+    }
+    >.new_prve:hover{
+      background-position-y:-2347px; 
+    }
+    >.new_next:hover{
+      background-position-y: -4289px;
+    }
+    >ul{
+      height:398px;
+        >li{
+          width:25%;
+          float:left;
+          height:344px;
+          a{
+            display: block;
+            width:100%;
+            height:100%;
+            text-align: center;
+            img{
+              width:100%;
+            }
+            h2{
+              @include h2;
+            }
+            h2:hover{
+              color:#b4a078;
+            }
+            p{
+              text-align: center;
+              margin-top:12px;
+              .price{
+                color:#d4282d;
+              }
+              .shops{
+                color:#999999;
+                padding-left:12px;
+                border-left:1px solid #999999;
+                margin-left:8px;
+              }
+            }
+          }
+        }
+        .ac{
+          background-color: #f4f0ea;
+        }
+      }
+  }
 //尾部
 .footer{
   height:502px;

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录网页严选</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/car.css">
+  <script src="/libs/require.js" data-main="/js/car.js"></script>
+
+</head>
+<body>
+    <!-- 头部 -->
+    <header id="header"></header>
+    <!-- 主体 -->
+    <div class="main">
+      <div class="couponBox">
+        <div class="coupon w"><i></i>可领取优惠卷<a href="javascript:;">查看优惠卷</a></div>
+      </div>
+      <div class="w car">
+        <div class="carImg"></div>
+        <div class="btn"><a href="/html/denglu.html" class="login_button">登录</a><a href="/index.html">继续逛</a></div>
+        <div class="car_title">
+          <div class="item">
+            <input type="checkbox" id="allcheck"><label for="allcheck">全选</label>
+          </div>
+          <div class="item">商品信息</div>
+          <div class="item">单价</div>
+          <div class="item">数量</div>
+          <div class="item">小计</div>
+          <div class="item">操作</div>
+        </div>
+        <ul class="carPro">
+        </ul>
+        <div class="okList">
+          <div class="youSele">
+            <input type="checkbox" class="already" checked="checked">
+            已选<span class="allCount"></span>
+          </div>
+          <div class="delLise">批量删除</div>
+          <div class="shouldPrice">
+            <span>应付总额：</span>
+            <span id="yifu"></span>
+          </div>
+          <div class="subBtn">下单</div>
+        </div>
+      </div>
+      <div class="mackLike w">
+        <h1>猜你喜欢</h1>
+        <div class="newImg w" id="newImg">
+          <div class="new_prve"></div>
+          <ul>
+          </ul>
+          <div class="new_next"></div>
+        </div>
+      </div>
+     </div>
+    <!-- 尾部 -->
+  <footer id="footer"></footer>
+  <script type="text/html" id="list">
+    <li>
+        <a href="/html/details.html?id={{data.id}}">
+          <img src={{data.img[0]}} alt="">
+          <h2 >{{data.proName}}</h2>
+          <p>
+            <span class="price">￥{{data.xprice}}</span> 
+            {{if data.shops}}
+            <span class="shops">{{data.shops}}</span>
+            {{/if}}
+          </p>
+        </a>
+    </li>
+  </script>
+  <script type="text/html" id="carPro">
+    {{each data val}}
+    <li>
+      <div class="check">
+        <input type="checkbox" class="sele" name="sele" checked="checked">
+      </div>
+      <div class="imgPro">
+        <img src="{{val.img}}" alt="">
+        <span class="proName" data-id="{{val.proId}}">{{val.proName}}</span>
+      </div>
+      <div class="proPrice">￥{{val.onePrice}}</div>
+      <div class="proCount"><span class="subtract">-</span><input type="text" class="carCount" value="{{val.num}}"><span class="add">+</span></span></div>
+      <div class="allPrice">￥{{val.onePrice*val.num}}</div>
+      <div class="del">删除</div>
+    </li>
+    {{/each}}
+  </script>
+</body>
+</html>

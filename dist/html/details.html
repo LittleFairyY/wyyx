@@ -3,13 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/details.css">
   <script src="/libs/require.js" data-main="/js/details.js"></script>
 </head>
 <body>
-  <div id="box">
-    <!-- <img src="" alt="">
-    <div class="proName"></div>
-    <div class="price"></div> -->
+  <!-- 头部 -->
+  <header id="header"></header>
+  <div class="main w" id="main">
+    <!-- 面包屑导航 -->
+    <div class="crumbs">
+        <a href="/index.html">首页</a> > 
+        <a class="oneCrubs"></a> > 
+        <a href="javascript:;" class="twoCrubs"></a> > 
+        <span class="crumbsProName"></span>
+    </div>
+  <!-- 商品显示 -->
+    <div class="proinfo_show">
+      
+    </div>
   </div>
+  <!-- 尾部 -->
+  <footer id="footer"></footer>
+  <script type="text/html" id="proInfo">
+    <div>
+      <div class="proinfo_left fl">
+        <img src="{{data.bigimg[0]}}" alt="">
+        <ul>
+          {{each data.smallimg val index}}
+          <li><img src="{{val}}" alt=""></li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="proinfo_right fr">
+        <span class="shops">{{data.shops}}</span>
+        <h1>{{data.proName}}</h1>
+        <p>{{data.description}}</p>
+        <div class="proinfo">
+          <p>
+            <span>价格</span>
+            <span class="price">￥{{data.xprice}}</span>
+          </p>
+          <p>
+            <span>领劵</span>
+            <span class="juan">全场每满219减21 <i>领券</i></span>
+          </p>
+          <p>
+            <span>促销</span>
+            <span class="jian">每满99元减20元</span>
+          </p>
+          <p>
+            <span>积分</span>
+            <span>{{data.points}}</span>
+          </p>
+          <p>
+            <span>服务</span>
+            <a>･ 支持30天无忧退换货    
+              ･ 48小时快速退款    
+              ･ 满88元免邮费    
+              ･ 网易自营品牌    
+              ･ 国内部分地区无法配送   </a>
+          </p>
+        </div>
+        <div class="btn">
+          <button>立即购买</button>
+          <button id="addCar"><i></i>加入购物车</button>
+          <span>收藏</span>
+        </div>
+      </div>
+    </div>
+  </script>
 </body>
 </html>
