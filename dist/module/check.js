@@ -80,7 +80,7 @@ define(["url","cookie","md5"],function(url,cookie){
             $("#hint").html("不能使用同一个电话号码只能绑定一个邮箱！");
             e.preventDefault();
           } else if(datas.code==2){
-            $("#hint").htmlt("注册失败！");
+            $("#hint").html("注册失败！");
             e.preventDefault();
           }else if(datas.code==1){
             $("#hint").html("恭喜你注册成功！");

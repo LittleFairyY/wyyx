@@ -1,48 +1,5 @@
+@import "base";
 
-@mixin  center {
-  left:0;right:0;margin:auto;
-}
-@mixin cz {
-  top:0;bottom:0;margin:auto;
-}
-@mixin  iBlock($width,$height,$lineHeight) {
-  position: absolute;
-  text-align: center;
-  width:$width;
-  height:$height;
-  line-height: $lineHeight;
-  font-size: $font-size;
-  color:#fff;
-}
-@mixin h2 {
-  margin-top:20px;
-  font-weight: 600;
-  color:$bgcolor;
-  text-align: center;
-}
-@mixin prevBtn {
-  width:30px;
-  height:30px;
-  border-radius: 50%;
-  background: url(../img/index/icon4.png) no-repeat 0 -2389px;
-  position: absolute;
-  left:-15px;
-  z-index: 5;
-  @include cz;
-}
-@mixin nextBtn {
-  width:30px;
-  height:30px;
-  border-radius: 50%;
-  background: url(../img/index/icon4.png) no-repeat 0 -4329px;
-  position: absolute;
-  right:-15px;
-  z-index: 5;
-  @include cz;
-}
-$bgcolor:#333333; //头部背景颜色
-$color:#b4a078 #d4282d #f4f0ea; //logo字体颜色
-$font-size:12px;
 //轮播图
 .banner{
   height:420px;
@@ -127,8 +84,8 @@ $font-size:12px;
     color:$bgcolor;
   }
   .active{
-    color:nth($color,1);
-    border-bottom:3px solid nth($color,1);
+    color:nth($color,4);
+    border-bottom:3px solid nth($color,4);
   }
   >a{
     float: right;
@@ -232,17 +189,17 @@ $font-size:12px;
         }
         >div{
           height:130px;
-          border-top:1px solid nth($color,3);
+          border-top:1px solid nth($color,6);
           padding-top:30px;
           h2{
             @include h2;
             margin-bottom:10px;
           }
           h2:hover{
-            color:nth($color,1);
+            color:nth($color,4);
           }
           .price{
-            color:nth($color,2);
+            color:nth($color,5);
           }
         }
       }
@@ -269,7 +226,7 @@ $font-size:12px;
             transition: all 1s;
           }
           >div{
-            border-top:1px solid nth($color,3);
+            border-top:1px solid nth($color,6);
             height:80px;
             h2{
               @include h2;
@@ -283,7 +240,7 @@ $font-size:12px;
             }
             .oldPrice{
               text-decoration: line-through;
-              color:#999999;
+              color:nth($color,1);
             }
           }
         }
@@ -431,7 +388,7 @@ $font-size:12px;
           >button{
             width:118px;
             height:30px;
-            background-color: nth($color,2);
+            background-color: nth($color,5);
             color:#fff;
             border-radius: 2px
           }

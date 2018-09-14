@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50045
 File Encoding         : 65001
 
-Date: 2018-09-13 08:51:41
+Date: 2018-09-14 14:15:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -35,7 +35,6 @@ CREATE TABLE `car` (
 INSERT INTO `car` VALUES ('25', '9', '/img/detail/p1.png', '659', '8', '2');
 INSERT INTO `car` VALUES ('26', '9', '/img/detail/s1.jpg', '339', '4', '5');
 INSERT INTO `car` VALUES ('27', '9', '/img/detail/m1.jpg', '45', '2', '8');
-INSERT INTO `car` VALUES ('28', '9', '/img/detail/z1.jpg', '295', '3', '24');
 
 -- ----------------------------
 -- Table structure for `nav`
@@ -57,9 +56,9 @@ INSERT INTO `nav` VALUES ('1', '首页', '0', null, null);
 INSERT INTO `nav` VALUES ('2', '居家', '0', null, null);
 INSERT INTO `nav` VALUES ('7', '床品件套', '2', '/img/index/cpjt.png', 'MUJI等品牌制造商出品');
 INSERT INTO `nav` VALUES ('8', '被枕', '2', '/img/index/zx.png', '守护你的睡眠时光');
-INSERT INTO `nav` VALUES ('9', '家具', '2', '/img/index/ju.png', '大师级工艺');
+INSERT INTO `nav` VALUES ('9', '家具', '2', '/img/index/jz.png', '大师级工艺');
 INSERT INTO `nav` VALUES ('10', '灯具', '2', '/img/index/dj.png', '一盏灯，温暖一个家');
-INSERT INTO `nav` VALUES ('11', '家饰', '2', '/img/index.1bd51b940ede5b0a975a36d20f9c12de.png', '装饰你的家');
+INSERT INTO `nav` VALUES ('11', '家饰', '2', '/img/index/1bd51b940ede5b0a975a36d20f9c12de.png', '装饰你的家');
 INSERT INTO `nav` VALUES ('12', '晾晒除味', '2', '/img/index/73b7fa444f9dd370d396dd9cd03aa7f6.png', '居家晾晒必备好物');
 INSERT INTO `nav` VALUES ('13', '旅行用品', '2', '/img/index/f3cb3a8619734ea6d0ba674e084f6477.png', '出行小物，贴心相伴');
 INSERT INTO `nav` VALUES ('14', '鞋包配饰', '0', null, null);
@@ -76,7 +75,7 @@ INSERT INTO `nav` VALUES ('24', '众筹', '0', null, null);
 INSERT INTO `nav` VALUES ('25', '收纳', '2', '/img/index/sn.png', '选自古驰竹柄原料供应商');
 INSERT INTO `nav` VALUES ('26', '男鞋', '14', '/img/index/c1052ec10b350e7612cb9226a60cdfd5.png', '匠心打造，轻潮舒适');
 INSERT INTO `nav` VALUES ('27', '布艺软装', '2', '/img/index/f57994dcda1e459f69a6d3a092aebe7d.png', '各种风格软装装点你的家');
-INSERT INTO `nav` VALUES ('28', '女鞋', '14', 'img/index/4ab4b4ff0bce6236a46c13f28823736d.png', '给你行走的力量');
+INSERT INTO `nav` VALUES ('28', '女鞋', '14', '/img/index/4ab4b4ff0bce6236a46c13f28823736d.png', '给你行走的力量');
 INSERT INTO `nav` VALUES ('29', '行李箱', '14', '/img/index/c334fe053304b63f9cdcf88b7d16b948.png', '带着梦想即刻出发');
 INSERT INTO `nav` VALUES ('30', '女式包袋', '14', '/img/index/32781d3bce89750f6a54b09b89336b68.png', '包里装着你的整个世界');
 INSERT INTO `nav` VALUES ('31', '韩国馆', '22', '/img/index/3b4cf5ae851e82e431509355dc79906a.png', '韩国制造精巧好物');
@@ -125,7 +124,7 @@ INSERT INTO `pro` VALUES ('2', '男士优质小牛皮手工正装鞋', '精挑�
 INSERT INTO `pro` VALUES ('3', '泰国制造 天然乳胶枕 护肩舒眠 升级抗菌', '升级AAA抗菌 SGS全程监控', null, '199', '/img/index/5d5ac39fa2e4ba1f9edb2bb1cb469ddf.png,/img/index/c491f5bc7d1fc25f095abd482f2f6a96.jpg', '海外制造商', '0', null, '38', '0', 'xp', '/img/detail/yy1.jpg,/img/detail/yy2.jpg,/img/detail/yy3.jpg,/img/detail/yy4.jpg,/img/detail/yy5.jpg', '/img/detail/y1.jpg,/img/detail/y2.jpg,/img/detail/y3.jpg,/img/detail/y4.jpg,/img/detail/y5.jpg', '购买最高得65积分');
 INSERT INTO `pro` VALUES ('4', '日本制造 缤纷果味汽水 300毫升', '酸甜交织，一口喝出夏日缤纷清爽', null, '12.9', '/img/index/89449ebb60d9f933ec4f879eabb4c900.png,/img/index/ba34c63eef150de82ea0b26493dd6ed9.jpg', '', '0', null, '32', null, 'xp', '/img/detail/111.jpg,/img/detail/222.jpg,/img/detail/333.jpg,/img/detail/444.jpg,/img/detail/555.jpg', '/img/detail/11.jpg,/img/detail/22.jpg,/img/detail/33.jpg,/img/detail/44.jpg,/img/detail/55.jpg', '购买最高得36积分');
 INSERT INTO `pro` VALUES ('5', '24存 纯PC \"铝框\" （非全铝）拉杆箱', '71升容量升级 灵活出行', null, '339', '/img/index/021188f19de55d4e146dee96b9a0e104.png', '新秀丽制造商', '0', null, '29', null, 'bjz', '/img/detail/ss1.jpg,/img/detail/ss2.jpg,/img/detail/ss3.jpg,/img/detail/ss4.jpg,/img\\detail/ss5.jpg', '/img/detail/s1.jpg,/img/detail/s2.jpg,/img/detail/s3.jpg,/img/detail/s4.jpg,/img\\detail/s5.jpg', '购买最高得36积分');
-INSERT INTO `pro` VALUES ('6', '超柔弹力懒人沙发', '软糯高弹，双层防漏，舒适自由组合', '349', '279', 'img/index/fda4a7b5f14061e177228af4cb51333f.png', null, '0', null, '27', null, 'bjtj', '/img/detail/uu1.jpg,/img/detail/uu2.jpg,/img/detail/uu3.jpg,/img/detail/uu4.jpg,/img/detail/uu5.jpg', '/img/detail/u1.jpg,/img/detail/u2.jpg,/img/detail/u3.jpg,/img/detail/u4.jpg,/img/detail/u5.jpg', '购买最高得34积分');
+INSERT INTO `pro` VALUES ('6', '超柔弹力懒人沙发', '软糯高弹，双层防漏，舒适自由组合', '349', '279', '/img/index/fda4a7b5f14061e177228af4cb51333f.png', null, '0', null, '27', null, 'bjtj', '/img/detail/uu1.jpg,/img/detail/uu2.jpg,/img/detail/uu3.jpg,/img/detail/uu4.jpg,/img/detail/uu5.jpg', '/img/detail/u1.jpg,/img/detail/u2.jpg,/img/detail/u3.jpg,/img/detail/u4.jpg,/img/detail/u5.jpg', '购买最高得34积分');
 INSERT INTO `pro` VALUES ('7', '多功能人体工学转椅', '冈村椅制造商携手打造', '1399', '1199', '/img/index/7880da24e96f6e18916b16d0f1482369.png', null, '0', null, '9', null, 'bjtj', '/img/detail/qq1.jpg,/img/detail/qq2.jpg,/img/detail/qq3.jpg,/img/detail/qq4.jpg,/img/detail/qq5.jpg', '/img/detail/q1.jpg,/img/detail/q2.jpg,/img/detail/q3.jpg,/img/detail/q4.jpg,/img/detail/q5.jpg', '购买最高得34积分');
 INSERT INTO `pro` VALUES ('8', '美国制造 除甲醛空气净化剂227g', '有效吸收甲醛、去除空间异味', '129', '45', '/img/index/kqjhq.png', null, '0', null, '35', null, 'bjtj', '/img/detail/mm1.jpg,/img/detail/mm2.jpg,/img/detail/mm3.jpg,/img/detail/mm4.jpg,/img/detail/mm5.jpg', '/img/detail/m1.jpg,/img/detail/m2.jpg,/img/detail/m3.jpg,/img/detail/m4.jpg,/img/detail/m5.jpg', '购买最高得4积分');
 INSERT INTO `pro` VALUES ('9', '浓缩即食燕窝 70克*3瓶 99%', '浓缩精炖，进口燕条', null, '328', 'img/index/b532f2f441572242333f6c5b92fc9f10.png', null, '0', null, '44', null, 'bjtj', '/img/index/qq1.jpg,/img/index/qq2.jpg,/img/index/qq3.jpg,/img/index/qq4.jpg,/img/index/qq5.jpg', '/img/index/q1.jpg,/img/index/q2.jpg,/img/index/q3.jpg,/img/index/q4.jpg,/img/index/q5.jpg', '购买最高得32积分');
@@ -161,9 +160,10 @@ CREATE TABLE `user` (
   `userPwd` varchar(255) default NULL,
   `userEmail` varchar(255) default NULL,
   PRIMARY KEY  (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('9', '13541025648', '200820e3227815ed1756a6b531e7e0d2', '1902217131@qq.com');
+INSERT INTO `user` VALUES ('10', '13515236598', '200820e3227815ed1756a6b531e7e0d2', '1902211@qq.com');

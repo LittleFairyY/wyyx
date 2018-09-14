@@ -1,25 +1,29 @@
-define(['url',"template"], function(url,template) {
+define(['url',"template","cookie"], function(url,template) {
   function GetListNav(){};
   GetListNav.prototype.getData=function(){
     var sid=window.location.search.split("=")[1];
-    $.get(url.url+"/v1/getNav.php",{"sid":sid},function(datas){
-      var div=template("pro_title",{data:datas.data});
-      $("#allpro").append($(div));
       var str="";
-      $.each(datas.data,function(index,val){
-        str+=`<a href='#${val.id}'>${val.navName}</a>`;
-        $.get(url.url+"/v1/getProList.php",{"type":val.id},function(datass){
-         $.each(datass.data,function(i,val){
-            val.img=val.img.split(",");
+        $.get(url.url+"/v1/getProList.php",{childId:sid},function(datas){
+         $.each(datas,function(i,val){
+          str+=`<a href='#${val.titleId}'>${val.title}</a>`;
+            $.each(val.data,function(index,value){
+             value.img=value.img.split(",");
+            });
+            if(val.data.length>0){
+              var div=template("pro_title",{data:val});
+              $("#allpro").append($(div));
+            }
          });
-         if(datass.data.length==0){
-          $(".pro_show").eq(index).hide();
-         }
-         var li=template("pro_info",{data:datass.data});
-         $(".pro").eq(index).append($(li))
+         $("#proItem").html(str);
         },"json");
+  }
+  GetListNav.prototype.pro=function(){
+    $.get(url.url+"/v1/search.php",{text:decodeURI($.cookie("text"))},function(data){
+      $.each(data.data,function(index,val){
+        val.img=val.img.split(",");
       });
-      $("#proItem").html(str);
+      var div=template("pro_info",{data:data.data});
+      $(".pro").append($(div));
     },"json")
   }
   return new GetListNav();

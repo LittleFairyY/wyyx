@@ -9,11 +9,11 @@ define([
     $.get(url.url+"/v1/getData.php",{"id":id},function(datas){
       //面包屑导航
       $(".crumbsProName").html(datas.data[0].proName);
-      $.get(url.url+"/v1/getItem.php",{"sid":datas.data[0].type},function(datas){
-        $(".twoCrubs").html(datas.data[0].navName);
-        $.get(url.url+"/v1/getItem.php",{"sid":datas.data[0].childId},function(datas){
-          $.cookie("index",datas.data[0].id,{path:"/"});
-        $(".oneCrubs").html(datas.data[0].navName).attr("href","/html/list.html?type="+datas.data[0].id);
+      $.get(url.url+"/v1/getItem.php",{"sid":datas.data[0].type},function(da){
+        $.get(url.url+"/v1/getItem.php",{"sid":da.data[0].childId},function(data){
+          $.cookie("index",data.data[0].id,{path:"/"});
+          $(".twoCrubs").html(da.data[0].navName).prop("href","/html/list.html?type="+data.data[0].id+"#"+datas.data[0].type);
+        $(".oneCrubs").html(data.data[0].navName).attr("href","/html/list.html?type="+data.data[0].id);
         },"json")
       },"json");
 

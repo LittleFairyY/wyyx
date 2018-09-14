@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>登录网页严选</title>
-  <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/list.css">
   <script src="/libs/require.js" data-main="/js/list.js"></script>
 
@@ -36,12 +35,12 @@
                 <span>全部</span>
               </div>
               <div class="proItem fl">
-                <a href="javascript:;">床品件套</a>
-                <a href="javascript:;">被套</a>
-                <a href="javascript:;">家具</a>
-                <a href="javascript:;">灯具</a>
-                <a href="javascript:;">收纳</a>
-              </div>
+                  <a href="javascript:;">成都</a>
+                  <a href="javascript:;">上海</a>
+                  <a href="javascript:;">重庆</a>
+                  <a href="javascript:;">广东</a>
+                  <a href="javascript:;">西藏</a>
+                </div>
             </li>
             <li>
               <div class="title fl">
@@ -59,84 +58,33 @@
           </ul>
         </div>
         <!-- pro显示 -->
-        <!-- <div class="pro_show">
-          <div class="pro_tile">
-            <h1>床品件套</h1>
-            <p>MUJI等品牌制造商出品</p>
-          </div>
-          <ul class="pro">
-            <li>
-              <img src="/img/list/p1.jpg" alt="">
-              <div class="zk">新品</div>
-              <div class="proName">秋遇.漫花开贡锻四件套</div>
-              <div class="proPrice">￥439</div>
-              <p>经典暖色调配色，随性美式加身</p>
-            </li>
-            <li>
-              <img src="/img/list/p1.jpg" alt="">
-              <div class="zk">新品</div>
-              <div class="proName">秋遇.漫花开贡锻四件套</div>
-              <div class="proPrice">￥439</div>
-              <p>经典暖色调配色，随性美式加身</p>
-            </li>
-            <li>
-              <img src="/img/list/p1.jpg" alt="">
-              <div class="zk">新品</div>
-              <div class="proName">秋遇.漫花开贡锻四件套</div>
-              <div class="proPrice">￥439</div>
-              <p>经典暖色调配色，随性美式加身</p>
-            </li>
-            <li>
-              <img src="/img/list/p1.jpg" alt="">
-              <div class="zk">新品</div>
-              <div class="proName">秋遇.漫花开贡锻四件套</div>
-              <div class="proPrice">￥439</div>
-              <p>经典暖色调配色，随性美式加身</p>
-            </li>
-            <li>
-              <img src="/img/list/p1.jpg" alt="">
-              <div class="zk">新品</div>
-              <div class="proName">秋遇.漫花开贡锻四件套</div>
-              <div class="proPrice">￥439</div>
-              <p>经典暖色调配色，随性美式加身</p>
-            </li>
-            <li>
-              <img src="/img/list/p1.jpg" alt="">
-              <div class="zk">新品</div>
-              <div class="proName">秋遇.漫花开贡锻四件套</div>
-              <div class="proPrice">￥439</div>
-              <p>经典暖色调配色，随性美式加身</p>
-            </li>
-          </ul>
-        </div> -->
       </div>
     </div>
     <!-- 尾部 -->
   <footer id="footer"></footer>
   <script type="text/html" id="pro_title">
-    {{each data val index}}
-    <div class="pro_show" id="{{val.id}}">
+    <div class="pro_show" id="{{data.titleId}}">
       <div class="pro_tile">
-        <h1>{{val.navName}}</h1>
-        <p>{{val.description}}</p>
+        <h1>{{data.title}}</h1>
+        <p>{{data.description}}</p>
       </div>
       <ul class="pro">
+          {{each data.data value index}}
+          <li>
+            <a href="/html/details.html?id={{value.id}}">
+              <img src="{{value.img[0]}}" alt="">
+              <div class="zk">新品</div>
+              <div class="proName">{{value.proName}}</div>
+              <div class="proPrice">￥{{value.xprice}}</div>
+              <p>{{value.description}}</p>
+            </a>
+          </li>
+          {{/each}}
       </ul>
     </div>
-    {{/each}}
   </script>
-  <script type="text/html" id="pro_info">
-    {{each data val index}}
-    <li>
-      <a href="/html/details.html?id={{val.id}}">
-        <img src="{{val.img[0]}}" alt="">
-        <div class="zk">新品</div>
-        <div class="proName">{{val.proName}}</div>
-        <div class="proPrice">￥{{val.xprice}}</div>
-        <p>{{val.description}}</p>
-      </a>
-    </li>
-    {{/each}}
-  </script>
+  <!-- <script type="text/html" id="pro_info">
+    
+  </script> -->
 </body>
 </html>

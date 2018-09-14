@@ -1,7 +1,4 @@
-@mixin cz {
-  top:0;bottom:0;margin:auto;
-}
-$color:#999999 #333333 #dddddd #b4a078 #d4282d;
+@import "base";
 .main{
   .crumbs{
     height:52px;

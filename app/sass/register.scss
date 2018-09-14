@@ -1,15 +1,4 @@
-$color:#999999 #333333 #dddddd #b4a078;
-@mixin cz {
-  top:0;bottom:0;margin:auto;
-}
-@mixin  iBlock($width,$height,$lineHeight) {
-  position: absolute;
-  text-align: center;
-  width:$width;
-  height:$height;
-  line-height: $lineHeight;
-  color:#fff;
-}
+@import "base";
 .rgBox{
   width:384px;
   height:498px;

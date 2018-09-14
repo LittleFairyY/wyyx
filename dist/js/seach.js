@@ -1,0 +1,11 @@
+require(['config'],function(){
+  require(['jquery','base',"getListNav"],function($,base,getListNav){
+    $(function(){
+      //头部
+      base.head();
+      getListNav.pro();
+      //尾部
+      base.foot();
+    });
+  });
+});
