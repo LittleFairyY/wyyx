@@ -11,8 +11,6 @@ define(['url'], function(url) {
          $(".userNameLabel").css("background-image","url(/img/login/rt.png)");
       }
     })
-    $("#rg").on("click",function(){
-    })
   }
   return new Change();
 });

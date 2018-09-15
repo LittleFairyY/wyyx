@@ -1,10 +1,9 @@
 <?php
   header("Access-Control-Allow-Origin:*");
-  $kind=$_GET["kind"];
-  $title=$_GET["left"];
+  $sid=(int)$_GET["sid"];
   mysql_connect("localhost","root","");
   mysql_select_db("wyyx");
-  $sql="select * from pro where kind='$kind' or kind='$title' LIMIT 7";
+  $sql="select * from nav where id=$sid";
   mysql_query("set names 'utf8'");
   $result = mysql_query($sql);
   $arr=array();

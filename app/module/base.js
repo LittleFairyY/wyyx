@@ -51,11 +51,8 @@ define(["url","cookie"],function(url) {
     $.get(url.url+"/v1/getNav.php",function(data){
       var str="";
       $.each(data,function(index,val){
-        if($.cookie("index")==1){
-          $("#nav").find("li:eq(0)>a").addClass("active").attr("href","/index.html").siblings().parents("li").find("a").removeClass("active")
-        }
         if(window.location.search==""){
-          $.cookie("index",1,{path:"/"});
+          $.cookie("index",0,{path:"/"});
         }else{
           $("#nav").find("li:eq("+($.cookie("index"))+")>a").addClass("active").parents("li").siblings().find("a").removeClass("active");
         }
@@ -86,10 +83,16 @@ define(["url","cookie"],function(url) {
       },function(){
         $(this).find(".nav_item").hide();
       }).parent().find("li a").on("click",function(){
+        $("#nav").find("li:eq(0)>a").attr("href","/index.html")
         $.cookie("index",($(this).parents("li").index()),{path:"/"});
         $("#nav").find("li:eq("+($.cookie("index"))+")>a").addClass("active").parents("li").siblings().find("a").removeClass("active");
       });
-
+      if(window.location.pathname!="/html/list.html" && window.location.pathname!="/index.html"){
+        $("#nav").find("li>a").removeClass("active")
+      }
+      if($.cookie("index")==0){
+        $("#nav").find("li:eq(0)>a").addClass("active").attr("href","/index.html").siblings().parents("li").find("a").removeClass("active")
+      }
     },"json");
   }
   //尾部
